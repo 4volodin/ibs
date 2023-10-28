@@ -1,0 +1,1701 @@
+[2023-07-26T06:23:02.884Z] Started by user AKovalchuk
+[2023-07-26T06:23:02.885Z] Checking out git https://bb.ibs.ru/scm/gpnkspk/integration-capex.git into /var/jenkins_home/workspace/KSPK-INFINISOFT/integration-capex@script/489de032cffa4283e4b20d947762a8cf747753fc7fead76b1438231502a5877a to read ci/jenkins/Jenkinsfile
+[2023-07-26T06:23:02.899Z] The recommended git tool is: NONE
+[2023-07-26T06:23:02.899Z] using credential kspk-ci
+[2023-07-26T06:23:02.918Z]  > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/KSPK-INFINISOFT/integration-capex@script/489de032cffa4283e4b20d947762a8cf747753fc7fead76b1438231502a5877a/.git # timeout=10
+[2023-07-26T06:23:02.929Z] Fetching changes from the remote Git repository
+[2023-07-26T06:23:02.941Z]  > git config remote.origin.url https://bb.ibs.ru/scm/gpnkspk/integration-capex.git # timeout=10
+[2023-07-26T06:23:02.961Z] Fetching upstream changes from https://bb.ibs.ru/scm/gpnkspk/integration-capex.git
+[2023-07-26T06:23:02.961Z]  > git --version # timeout=10
+[2023-07-26T06:23:02.967Z]  > git --version # 'git version 2.30.2'
+[2023-07-26T06:23:02.967Z] using GIT_ASKPASS to set credentials kspk-ci
+[2023-07-26T06:23:02.991Z]  > git fetch --tags --force --progress -- https://bb.ibs.ru/scm/gpnkspk/integration-capex.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2023-07-26T06:23:06.154Z]  > git rev-parse refs/remotes/origin/release/GKS^{commit} # timeout=10
+[2023-07-26T06:23:06.169Z] Checking out Revision 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a (refs/remotes/origin/release/GKS)
+[2023-07-26T06:23:06.169Z]  > git config core.sparsecheckout # timeout=10
+[2023-07-26T06:23:06.175Z]  > git checkout -f 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a # timeout=10
+[2023-07-26T06:23:06.390Z] Commit message: "добавил "sast_clean_ws": false"
+[2023-07-26T06:23:06.393Z]  > git rev-list --no-walk f4be5b509e25df8e0cbd749295b41de8923d77de # timeout=10
+[2023-07-26T06:23:06.769Z] [Pipeline] Start of Pipeline
+[2023-07-26T06:23:06.833Z] [Pipeline] withFolderProperties
+[2023-07-26T06:23:06.842Z] [Pipeline] {
+[2023-07-26T06:23:06.937Z] [Pipeline] }
+[2023-07-26T06:23:06.991Z] [Pipeline] // withFolderProperties
+[2023-07-26T06:23:07.205Z] [Pipeline] node
+[2023-07-26T06:23:07.240Z] Running on vm-okd-bldr-2 in /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:07.289Z] [Pipeline] {
+[2023-07-26T06:23:07.370Z] [Pipeline] stage
+[2023-07-26T06:23:07.385Z] [Pipeline] { (Declarative: Checkout SCM)
+[2023-07-26T06:23:07.470Z] [Pipeline] checkout
+[2023-07-26T06:23:07.495Z] The recommended git tool is: NONE
+[2023-07-26T06:23:07.508Z] using credential kspk-ci
+[2023-07-26T06:22:49.920Z]  > git rev-parse --resolve-git-dir /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.git # timeout=10
+[2023-07-26T06:23:09.041Z] Fetching changes from the remote Git repository
+[2023-07-26T06:22:51.646Z]  > git config remote.origin.url https://bb.ibs.ru/scm/gpnkspk/integration-capex.git # timeout=10
+[2023-07-26T06:22:51.653Z] Fetching upstream changes from https://bb.ibs.ru/scm/gpnkspk/integration-capex.git
+[2023-07-26T06:22:51.653Z]  > git --version # timeout=10
+[2023-07-26T06:22:51.656Z]  > git --version # 'git version 1.8.3.1'
+[2023-07-26T06:22:51.656Z] using GIT_ASKPASS to set credentials kspk-ci
+[2023-07-26T06:22:52.056Z]  > git fetch --tags --progress https://bb.ibs.ru/scm/gpnkspk/integration-capex.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2023-07-26T06:23:16.074Z] Checking out Revision 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a (refs/remotes/origin/release/GKS)
+[2023-07-26T06:23:16.231Z] Commit message: "добавил "sast_clean_ws": false"
+[2023-07-26T06:23:16.267Z] [Pipeline] }
+[2023-07-26T06:23:16.326Z] [Pipeline] // stage
+[2023-07-26T06:23:16.387Z] [Pipeline] withEnv
+[2023-07-26T06:23:16.398Z] [Pipeline] {
+[2023-07-26T06:23:16.475Z] [Pipeline] sh
+[2023-07-26T06:23:16.769Z] ++ git rev-parse --short 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a
+[2023-07-26T06:23:16.772Z] + printf 68f3233
+[2023-07-26T06:23:16.822Z] [Pipeline] sh
+[2023-07-26T06:22:58.178Z]  > git rev-parse refs/remotes/origin/release/GKS^{commit} # timeout=10
+[2023-07-26T06:22:58.185Z]  > git config core.sparsecheckout # timeout=10
+[2023-07-26T06:22:58.188Z]  > git checkout -f 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a # timeout=10
+[2023-07-26T06:23:17.115Z] ++ git rev-parse --short 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a
+[2023-07-26T06:23:17.117Z] + printf 68f3233
+[2023-07-26T06:23:17.162Z] [Pipeline] sh
+[2023-07-26T06:23:17.464Z] ++ git rev-parse --short 68f32330f6ff6e61f2a1fc889061c6dd3a1d1a8a
+[2023-07-26T06:23:17.466Z] + printf 68f3233
+[2023-07-26T06:23:17.521Z] [Pipeline] withEnv
+[2023-07-26T06:23:17.539Z] [Pipeline] {
+[2023-07-26T06:23:17.627Z] [Pipeline] stage
+[2023-07-26T06:23:17.651Z] [Pipeline] { (Set build name)
+[2023-07-26T06:23:17.770Z] [Pipeline] wrap
+[2023-07-26T06:23:17.840Z] [Pipeline] {
+[2023-07-26T06:23:17.902Z] [Pipeline] buildName
+[2023-07-26T06:23:17.920Z] New run name is '50-origin/release/GKS-68f3233'
+[2023-07-26T06:23:18.008Z] [Pipeline] buildDescription
+[2023-07-26T06:23:18.029Z] New run description is 'Executed @ vm-okd-bldr-2. Build started by AKovalchuk'
+[2023-07-26T06:23:18.082Z] [Pipeline] }
+[2023-07-26T06:23:18.161Z] [Pipeline] // wrap
+[2023-07-26T06:23:18.222Z] [Pipeline] script
+[2023-07-26T06:23:18.236Z] [Pipeline] {
+[2023-07-26T06:23:18.321Z] [Pipeline] }
+[2023-07-26T06:23:18.396Z] [Pipeline] // script
+[2023-07-26T06:23:18.470Z] [Pipeline] withCredentials
+[2023-07-26T06:23:18.491Z] Masking supported pattern matches of $BOT
+[2023-07-26T06:23:18.533Z] [Pipeline] {
+[2023-07-26T06:23:18.579Z] [Pipeline] sh
+[2023-07-26T06:23:18.595Z] Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+[2023-07-26T06:23:18.599Z] 		 Affected argument(s) used the following variable(s): [BOT]
+[2023-07-26T06:23:18.599Z] 		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
+[2023-07-26T06:23:18.877Z] + curl -X POST https://api.telegram.org/****/sendMessage -d chat_id=-791014650 -d parse_mode=markdown -d 'text=*STARTING JOB* 
+[2023-07-26T06:23:18.877Z] 
+[2023-07-26T06:23:18.877Z] [integration-capex #50](https://ci.apps.okd4.paas.ibs.ru/job/KSPK-INFINISOFT/job/integration-capex/50/)
+[2023-07-26T06:23:18.877Z] *Started by user AKovalchuk*'
+[2023-07-26T06:23:18.877Z]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-07-26T06:23:18.877Z]                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-07-26T06:23:19.397Z]   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   746  100   553  100   193   1040    362 --:--:-- --:--:-- --:--:--  1039
+[2023-07-26T06:23:19.402Z] {"ok":true,"result":{"message_id":836,"from":{"id":5629103800,"is_bot":true,"first_name":"kspk_ci","username":"kspk_ci_bot"},"chat":{"id":-791014650,"title":"COSMOS notifications","type":"group","all_members_are_administrators":true},"date":1690352599,"text":"STARTING JOB \n\nintegration-capex #50\nStarted by user AKovalchuk","entities":[{"offset":0,"length":12,"type":"bold"},{"offset":15,"length":21,"type":"text_link","url":"https://ci.apps.okd4.paas.ibs.ru/job/KSPK-INFINISOFT/job/integration-capex/50/"},{"offset":37,"length":26,"type":"bold"}]}}
+[2023-07-26T06:23:19.427Z] [Pipeline] }
+[2023-07-26T06:23:19.498Z] [Pipeline] // withCredentials
+[2023-07-26T06:23:19.538Z] [Pipeline] }
+[2023-07-26T06:23:19.608Z] [Pipeline] // stage
+[2023-07-26T06:23:19.671Z] [Pipeline] stage
+[2023-07-26T06:23:19.690Z] [Pipeline] { (Check dependency)
+[2023-07-26T06:23:19.792Z] [Pipeline] withCredentials
+[2023-07-26T06:23:19.812Z] Masking supported pattern matches of $NPM_REGISTRY_ALL_AUTH
+[2023-07-26T06:23:19.849Z] [Pipeline] {
+[2023-07-26T06:23:19.934Z] [Pipeline] withEnv
+[2023-07-26T06:23:19.946Z] [Pipeline] {
+[2023-07-26T06:23:20.022Z] [Pipeline] sh
+[2023-07-26T06:23:20.324Z] + export NVM_DIR=/home/jenkins/.nvm
+[2023-07-26T06:23:20.328Z] + NVM_DIR=/home/jenkins/.nvm
+[2023-07-26T06:23:20.328Z] + '[' -s /home/jenkins/.nvm/nvm.sh ']'
+[2023-07-26T06:23:20.328Z] + . /home/jenkins/.nvm/nvm.sh
+[2023-07-26T06:23:20.328Z] ++ NVM_SCRIPT_SOURCE=']'
+[2023-07-26T06:23:20.328Z] ++ '[' -z '' ']'
+[2023-07-26T06:23:20.328Z] ++ export NVM_CD_FLAGS=
+[2023-07-26T06:23:20.328Z] ++ NVM_CD_FLAGS=
+[2023-07-26T06:23:20.328Z] ++ nvm_is_zsh
+[2023-07-26T06:23:20.328Z] ++ '[' -n '' ']'
+[2023-07-26T06:23:20.328Z] ++ '[' -z /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.328Z] ++ case $NVM_DIR in
+[2023-07-26T06:23:20.328Z] ++ unset NVM_SCRIPT_SOURCE
+[2023-07-26T06:23:20.328Z] ++ nvm_process_parameters
+[2023-07-26T06:23:20.328Z] ++ local NVM_AUTO_MODE
+[2023-07-26T06:23:20.328Z] ++ NVM_AUTO_MODE=use
+[2023-07-26T06:23:20.328Z] ++ '[' 0 -ne 0 ']'
+[2023-07-26T06:23:20.328Z] ++ nvm_auto use
+[2023-07-26T06:23:20.328Z] ++ local NVM_MODE
+[2023-07-26T06:23:20.328Z] ++ NVM_MODE=use
+[2023-07-26T06:23:20.328Z] ++ local VERSION
+[2023-07-26T06:23:20.328Z] ++ local NVM_CURRENT
+[2023-07-26T06:23:20.328Z] ++ '[' _use = _install ']'
+[2023-07-26T06:23:20.328Z] ++ '[' _use = _use ']'
+[2023-07-26T06:23:20.328Z] +++ nvm_ls_current
+[2023-07-26T06:23:20.328Z] +++ local NVM_LS_CURRENT_NODE_PATH
+[2023-07-26T06:23:20.328Z] ++++ command which node
+[2023-07-26T06:23:20.328Z] +++ NVM_LS_CURRENT_NODE_PATH=/home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.328Z] ++++ nvm_version_dir iojs
+[2023-07-26T06:23:20.328Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.328Z] ++++ NVM_WHICH_DIR=iojs
+[2023-07-26T06:23:20.328Z] ++++ '[' -z iojs ']'
+[2023-07-26T06:23:20.328Z] ++++ '[' iojs = new ']'
+[2023-07-26T06:23:20.328Z] ++++ '[' _iojs = _iojs ']'
+[2023-07-26T06:23:20.329Z] ++++ nvm_echo /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.329Z] ++++ command printf '%s\n' /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.329Z] +++ nvm_tree_contains_path /home/jenkins/.nvm/versions/io.js /home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ local tree
+[2023-07-26T06:23:20.329Z] +++ tree=/home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.329Z] +++ local node_path
+[2023-07-26T06:23:20.329Z] +++ node_path=/home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ '[' @/home/jenkins/.nvm/versions/io.js@ = @@ ']'
+[2023-07-26T06:23:20.329Z] +++ '[' @/home/jenkins/.nvm/versions/node/v14.21.2/bin/node@ = @@ ']'
+[2023-07-26T06:23:20.329Z] +++ local previous_pathdir
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ local pathdir
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' /home/jenkins/.nvm/versions/node/v14.21.2/bin ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' /home/jenkins/.nvm/versions/node/v14.21.2 ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' /home/jenkins/.nvm/versions/node ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm '!=' /home/jenkins/.nvm/versions ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins '!=' /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home
+[2023-07-26T06:23:20.329Z] +++ '[' /home '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home '!=' /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home '!=' /home/jenkins ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home
+[2023-07-26T06:23:20.329Z] ++++ dirname /home
+[2023-07-26T06:23:20.329Z] +++ pathdir=/
+[2023-07-26T06:23:20.329Z] +++ '[' / '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' / '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' / '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' / = /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:20.329Z] +++ nvm_tree_contains_path /home/jenkins/.nvm /home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ local tree
+[2023-07-26T06:23:20.329Z] +++ tree=/home/jenkins/.nvm
+[2023-07-26T06:23:20.329Z] +++ local node_path
+[2023-07-26T06:23:20.329Z] +++ node_path=/home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ '[' @/home/jenkins/.nvm@ = @@ ']'
+[2023-07-26T06:23:20.329Z] +++ '[' @/home/jenkins/.nvm/versions/node/v14.21.2/bin/node@ = @@ ']'
+[2023-07-26T06:23:20.329Z] +++ local previous_pathdir
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ local pathdir
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node/v14.21.2/bin/node
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2/bin '!=' /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node/v14.21.2 '!=' /home/jenkins/.nvm/versions/node/v14.21.2/bin ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' / ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions/node '!=' /home/jenkins/.nvm/versions/node/v14.21.2 ']'
+[2023-07-26T06:23:20.329Z] +++ previous_pathdir=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.329Z] ++++ dirname /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.329Z] +++ pathdir=/home/jenkins/.nvm/versions
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' '' ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' . ']'
+[2023-07-26T06:23:20.329Z] +++ '[' /home/jenkins/.nvm/versions '!=' / ']'
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm/versions '!=' /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm/versions '!=' /home/jenkins/.nvm/versions/node ']'
+[2023-07-26T06:23:20.330Z] +++ previous_pathdir=/home/jenkins/.nvm/versions
+[2023-07-26T06:23:20.330Z] ++++ dirname /home/jenkins/.nvm/versions
+[2023-07-26T06:23:20.330Z] +++ pathdir=/home/jenkins/.nvm
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm '!=' '' ']'
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm '!=' . ']'
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm '!=' / ']'
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm '!=' /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.330Z] +++ '[' /home/jenkins/.nvm = /home/jenkins/.nvm ']'
+[2023-07-26T06:23:20.330Z] +++ local VERSION
+[2023-07-26T06:23:20.330Z] ++++ node --version
+[2023-07-26T06:23:20.591Z] +++ VERSION=v14.21.2
+[2023-07-26T06:23:20.591Z] +++ '[' v14.21.2 = v0.6.21-pre ']'
+[2023-07-26T06:23:20.591Z] +++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.591Z] +++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.591Z] ++ NVM_CURRENT=v14.21.2
+[2023-07-26T06:23:20.591Z] ++ '[' _v14.21.2 = _none ']'
+[2023-07-26T06:23:20.591Z] ++ '[' _v14.21.2 = _system ']'
+[2023-07-26T06:23:20.591Z] ++ nvm use --silent v14.21.2
+[2023-07-26T06:23:20.591Z] ++ '[' 3 -lt 1 ']'
+[2023-07-26T06:23:20.591Z] ++ local DEFAULT_IFS
+[2023-07-26T06:23:20.591Z] +++ nvm_echo t
+[2023-07-26T06:23:20.591Z] +++ command printf '%s\n' t
+[2023-07-26T06:23:20.591Z] +++ command tr t '\t'
+[2023-07-26T06:23:20.591Z] +++ tr t '\t'
+[2023-07-26T06:23:20.591Z] ++ DEFAULT_IFS=' 	
+[2023-07-26T06:23:20.591Z] '
+[2023-07-26T06:23:20.591Z] ++ '[' hxB '!=' ehxB ']'
+[2023-07-26T06:23:20.591Z] ++ set +e
+[2023-07-26T06:23:20.591Z] ++ local EXIT_CODE
+[2023-07-26T06:23:20.591Z] ++ IFS=' 	
+[2023-07-26T06:23:20.591Z] '
+[2023-07-26T06:23:20.591Z] ++ nvm use --silent v14.21.2
+[2023-07-26T06:23:20.591Z] ++ '[' 3 -lt 1 ']'
+[2023-07-26T06:23:20.591Z] ++ local DEFAULT_IFS
+[2023-07-26T06:23:20.591Z] +++ nvm_echo t
+[2023-07-26T06:23:20.591Z] +++ command printf '%s\n' t
+[2023-07-26T06:23:20.591Z] +++ command tr t '\t'
+[2023-07-26T06:23:20.591Z] +++ tr t '\t'
+[2023-07-26T06:23:20.591Z] ++ DEFAULT_IFS=' 	
+[2023-07-26T06:23:20.591Z] '
+[2023-07-26T06:23:20.591Z] ++ '[' hxB '!=' hxB ']'
+[2023-07-26T06:23:20.591Z] ++ '[' hxB '!=' hxB ']'
+[2023-07-26T06:23:20.591Z] ++ '[' -n /usr/bin/sh ']'
+[2023-07-26T06:23:20.591Z] ++ '[' hxB '!=' hxB ']'
+[2023-07-26T06:23:20.591Z] ++ '[' ' 	
+[2023-07-26T06:23:20.591Z] ' '!=' ' 	
+[2023-07-26T06:23:20.591Z] ' ']'
+[2023-07-26T06:23:20.591Z] ++ local i
+[2023-07-26T06:23:20.591Z] ++ for i in '"$@"'
+[2023-07-26T06:23:20.591Z] ++ case $i in
+[2023-07-26T06:23:20.591Z] ++ for i in '"$@"'
+[2023-07-26T06:23:20.591Z] ++ case $i in
+[2023-07-26T06:23:20.591Z] ++ for i in '"$@"'
+[2023-07-26T06:23:20.591Z] ++ case $i in
+[2023-07-26T06:23:20.591Z] ++ local COMMAND
+[2023-07-26T06:23:20.591Z] ++ COMMAND=use
+[2023-07-26T06:23:20.591Z] ++ shift
+[2023-07-26T06:23:20.591Z] ++ local VERSION
+[2023-07-26T06:23:20.591Z] ++ local ADDITIONAL_PARAMETERS
+[2023-07-26T06:23:20.591Z] ++ case $COMMAND in
+[2023-07-26T06:23:20.591Z] ++ local PROVIDED_VERSION
+[2023-07-26T06:23:20.591Z] ++ local NVM_SILENT
+[2023-07-26T06:23:20.591Z] ++ local NVM_SILENT_ARG
+[2023-07-26T06:23:20.591Z] ++ local NVM_DELETE_PREFIX
+[2023-07-26T06:23:20.591Z] ++ NVM_DELETE_PREFIX=0
+[2023-07-26T06:23:20.591Z] ++ local NVM_LTS
+[2023-07-26T06:23:20.591Z] ++ local IS_VERSION_FROM_NVMRC
+[2023-07-26T06:23:20.591Z] ++ IS_VERSION_FROM_NVMRC=0
+[2023-07-26T06:23:20.591Z] ++ '[' 2 -ne 0 ']'
+[2023-07-26T06:23:20.591Z] ++ case "$1" in
+[2023-07-26T06:23:20.591Z] ++ NVM_SILENT=1
+[2023-07-26T06:23:20.591Z] ++ NVM_SILENT_ARG=--silent
+[2023-07-26T06:23:20.591Z] ++ shift
+[2023-07-26T06:23:20.591Z] ++ '[' 1 -ne 0 ']'
+[2023-07-26T06:23:20.591Z] ++ case "$1" in
+[2023-07-26T06:23:20.591Z] ++ '[' -n v14.21.2 ']'
+[2023-07-26T06:23:20.591Z] ++ PROVIDED_VERSION=v14.21.2
+[2023-07-26T06:23:20.591Z] ++ shift
+[2023-07-26T06:23:20.591Z] ++ '[' 0 -ne 0 ']'
+[2023-07-26T06:23:20.591Z] ++ '[' -n '' ']'
+[2023-07-26T06:23:20.591Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.591Z] +++ nvm_match_version v14.21.2
+[2023-07-26T06:23:20.591Z] +++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:20.591Z] ++++ nvm_iojs_prefix
+[2023-07-26T06:23:20.591Z] ++++ nvm_echo iojs
+[2023-07-26T06:23:20.591Z] ++++ command printf '%s\n' iojs
+[2023-07-26T06:23:20.591Z] +++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:20.591Z] +++ local PROVIDED_VERSION
+[2023-07-26T06:23:20.591Z] +++ PROVIDED_VERSION=v14.21.2
+[2023-07-26T06:23:20.591Z] +++ case "_${PROVIDED_VERSION}" in
+[2023-07-26T06:23:20.591Z] +++ nvm_version v14.21.2
+[2023-07-26T06:23:20.591Z] +++ local PATTERN
+[2023-07-26T06:23:20.591Z] +++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.591Z] +++ local VERSION
+[2023-07-26T06:23:20.591Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.591Z] +++ '[' v14.21.2 = current ']'
+[2023-07-26T06:23:20.591Z] +++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:20.591Z] ++++ nvm_node_prefix
+[2023-07-26T06:23:20.591Z] ++++ nvm_echo node
+[2023-07-26T06:23:20.591Z] ++++ command printf '%s\n' node
+[2023-07-26T06:23:20.591Z] +++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:20.591Z] +++ case "_${PATTERN}" in
+[2023-07-26T06:23:20.591Z] ++++ nvm_ls v14.21.2
+[2023-07-26T06:23:20.591Z] ++++ local PATTERN
+[2023-07-26T06:23:20.591Z] ++++ command tail -1
+[2023-07-26T06:23:20.591Z] ++++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.591Z] ++++ local VERSIONS
+[2023-07-26T06:23:20.591Z] ++++ VERSIONS=
+[2023-07-26T06:23:20.591Z] ++++ '[' v14.21.2 = current ']'
+[2023-07-26T06:23:20.591Z] ++++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:20.591Z] ++++ tail -1
+[2023-07-26T06:23:20.591Z] +++++ nvm_iojs_prefix
+[2023-07-26T06:23:20.591Z] +++++ nvm_echo iojs
+[2023-07-26T06:23:20.591Z] +++++ command printf '%s\n' iojs
+[2023-07-26T06:23:20.591Z] ++++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:20.591Z] ++++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:20.591Z] +++++ nvm_node_prefix
+[2023-07-26T06:23:20.591Z] +++++ nvm_echo node
+[2023-07-26T06:23:20.591Z] +++++ command printf '%s\n' node
+[2023-07-26T06:23:20.591Z] ++++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:20.591Z] ++++ local NVM_VERSION_DIR_IOJS
+[2023-07-26T06:23:20.591Z] +++++ nvm_version_dir iojs
+[2023-07-26T06:23:20.591Z] +++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.591Z] +++++ NVM_WHICH_DIR=iojs
+[2023-07-26T06:23:20.591Z] +++++ '[' -z iojs ']'
+[2023-07-26T06:23:20.591Z] +++++ '[' iojs = new ']'
+[2023-07-26T06:23:20.591Z] +++++ '[' _iojs = _iojs ']'
+[2023-07-26T06:23:20.591Z] +++++ nvm_echo /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.591Z] +++++ command printf '%s\n' /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.591Z] ++++ NVM_VERSION_DIR_IOJS=/home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.591Z] ++++ local NVM_VERSION_DIR_NEW
+[2023-07-26T06:23:20.591Z] +++++ nvm_version_dir new
+[2023-07-26T06:23:20.591Z] +++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.591Z] +++++ NVM_WHICH_DIR=new
+[2023-07-26T06:23:20.591Z] +++++ '[' -z new ']'
+[2023-07-26T06:23:20.591Z] +++++ '[' new = new ']'
+[2023-07-26T06:23:20.591Z] +++++ nvm_echo /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.591Z] +++++ command printf '%s\n' /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.591Z] ++++ NVM_VERSION_DIR_NEW=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.591Z] ++++ local NVM_VERSION_DIR_OLD
+[2023-07-26T06:23:20.591Z] +++++ nvm_version_dir old
+[2023-07-26T06:23:20.591Z] +++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.591Z] +++++ NVM_WHICH_DIR=old
+[2023-07-26T06:23:20.591Z] +++++ '[' -z old ']'
+[2023-07-26T06:23:20.591Z] +++++ '[' old = new ']'
+[2023-07-26T06:23:20.591Z] +++++ '[' _old = _iojs ']'
+[2023-07-26T06:23:20.591Z] +++++ '[' _old = _old ']'
+[2023-07-26T06:23:20.591Z] +++++ nvm_echo /home/jenkins/.nvm
+[2023-07-26T06:23:20.591Z] +++++ command printf '%s\n' /home/jenkins/.nvm
+[2023-07-26T06:23:20.591Z] ++++ NVM_VERSION_DIR_OLD=/home/jenkins/.nvm
+[2023-07-26T06:23:20.591Z] ++++ case "${PATTERN}" in
+[2023-07-26T06:23:20.591Z] ++++ nvm_resolve_local_alias v14.21.2
+[2023-07-26T06:23:20.591Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.591Z] ++++ local VERSION
+[2023-07-26T06:23:20.591Z] ++++ local EXIT_CODE
+[2023-07-26T06:23:20.591Z] +++++ nvm_resolve_alias v14.21.2
+[2023-07-26T06:23:20.591Z] +++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.591Z] +++++ local PATTERN
+[2023-07-26T06:23:20.591Z] +++++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.591Z] +++++ local ALIAS
+[2023-07-26T06:23:20.591Z] +++++ ALIAS=v14.21.2
+[2023-07-26T06:23:20.591Z] +++++ local ALIAS_TEMP
+[2023-07-26T06:23:20.592Z] +++++ local SEEN_ALIASES
+[2023-07-26T06:23:20.592Z] +++++ SEEN_ALIASES=v14.21.2
+[2023-07-26T06:23:20.592Z] +++++ true
+[2023-07-26T06:23:20.592Z] ++++++ nvm_alias v14.21.2
+[2023-07-26T06:23:20.858Z] ++++++ nvm_echo
+[2023-07-26T06:23:20.858Z] ++++++ command printf '%s\n' ''
+[2023-07-26T06:23:20.858Z] +++++ ALIAS_TEMP=
+[2023-07-26T06:23:20.858Z] +++++ '[' -z '' ']'
+[2023-07-26T06:23:20.858Z] +++++ break
+[2023-07-26T06:23:20.858Z] +++++ '[' -n v14.21.2 ']'
+[2023-07-26T06:23:20.858Z] +++++ '[' _v14.21.2 '!=' _v14.21.2 ']'
+[2023-07-26T06:23:20.858Z] +++++ nvm_validate_implicit_alias v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ return 2
+[2023-07-26T06:23:20.858Z] ++++ VERSION=
+[2023-07-26T06:23:20.858Z] ++++ EXIT_CODE=2
+[2023-07-26T06:23:20.858Z] ++++ '[' -z '' ']'
+[2023-07-26T06:23:20.858Z] ++++ return 2
+[2023-07-26T06:23:20.858Z] +++++ nvm_ensure_version_prefix v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ local NVM_VERSION
+[2023-07-26T06:23:20.858Z] ++++++ nvm_strip_iojs_prefix v14.21.2
+[2023-07-26T06:23:20.858Z] ++++++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:20.858Z] ++++++ command sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:20.858Z] ++++++ sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:20.858Z] +++++++ nvm_iojs_prefix
+[2023-07-26T06:23:20.858Z] +++++++ nvm_echo iojs
+[2023-07-26T06:23:20.858Z] +++++++ command printf '%s\n' iojs
+[2023-07-26T06:23:20.858Z] ++++++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:20.858Z] ++++++ '[' v14.21.2 = iojs ']'
+[2023-07-26T06:23:20.858Z] ++++++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.858Z] ++++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ NVM_VERSION=v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ nvm_is_iojs_version v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ case "${1-}" in
+[2023-07-26T06:23:20.858Z] +++++ return 1
+[2023-07-26T06:23:20.858Z] +++++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.858Z] ++++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.858Z] ++++ '[' v14.21.2 = N/A ']'
+[2023-07-26T06:23:20.858Z] ++++ local NVM_PATTERN_STARTS_WITH_V
+[2023-07-26T06:23:20.858Z] ++++ case $PATTERN in
+[2023-07-26T06:23:20.858Z] ++++ NVM_PATTERN_STARTS_WITH_V=true
+[2023-07-26T06:23:20.858Z] ++++ '[' true = true ']'
+[2023-07-26T06:23:20.858Z] +++++ nvm_num_version_groups v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ local VERSION
+[2023-07-26T06:23:20.858Z] +++++ VERSION=v14.21.2
+[2023-07-26T06:23:20.858Z] +++++ VERSION=14.21.2
+[2023-07-26T06:23:20.858Z] +++++ VERSION=14.21.2
+[2023-07-26T06:23:20.858Z] +++++ '[' -z 14.21.2 ']'
+[2023-07-26T06:23:20.858Z] +++++ local NVM_NUM_DOTS
+[2023-07-26T06:23:20.858Z] ++++++ nvm_echo 14.21.2
+[2023-07-26T06:23:20.858Z] ++++++ command sed -e 's/[^\.]//g'
+[2023-07-26T06:23:20.858Z] ++++++ sed -e 's/[^\.]//g'
+[2023-07-26T06:23:20.858Z] ++++++ command printf '%s\n' 14.21.2
+[2023-07-26T06:23:20.858Z] +++++ NVM_NUM_DOTS=..
+[2023-07-26T06:23:20.858Z] +++++ local NVM_NUM_GROUPS
+[2023-07-26T06:23:20.858Z] +++++ NVM_NUM_GROUPS=...
+[2023-07-26T06:23:20.858Z] +++++ nvm_echo 3
+[2023-07-26T06:23:20.858Z] +++++ command printf '%s\n' 3
+[2023-07-26T06:23:20.858Z] ++++ '[' _3 = _3 ']'
+[2023-07-26T06:23:20.858Z] ++++ nvm_is_version_installed v14.21.2
+[2023-07-26T06:23:20.858Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.858Z] ++++ local NVM_NODE_BINARY
+[2023-07-26T06:23:20.858Z] ++++ NVM_NODE_BINARY=node
+[2023-07-26T06:23:20.858Z] +++++ nvm_get_os
+[2023-07-26T06:23:20.858Z] +++++ local NVM_UNAME
+[2023-07-26T06:23:20.858Z] ++++++ command uname -a
+[2023-07-26T06:23:20.858Z] ++++++ uname -a
+[2023-07-26T06:23:20.858Z] +++++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:20.858Z] +++++ local NVM_OS
+[2023-07-26T06:23:20.858Z] +++++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:20.858Z] +++++ NVM_OS=linux
+[2023-07-26T06:23:20.858Z] +++++ nvm_echo linux
+[2023-07-26T06:23:20.858Z] +++++ command printf '%s\n' linux
+[2023-07-26T06:23:20.858Z] ++++ '[' _linux = _win ']'
+[2023-07-26T06:23:20.858Z] +++++ nvm_version_path v14.21.2
+[2023-07-26T06:23:20.858Z] ++++ '[' -x /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:20.858Z] ++++ return 0
+[2023-07-26T06:23:20.858Z] ++++ VERSIONS=v14.21.2
+[2023-07-26T06:23:20.858Z] ++++ '[' '' = true ']'
+[2023-07-26T06:23:20.858Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.858Z] ++++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.859Z] ++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.859Z] +++ VERSION=v14.21.2
+[2023-07-26T06:23:20.859Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] +++ '[' _v14.21.2 = _N/A ']'
+[2023-07-26T06:23:20.859Z] +++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.859Z] +++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.859Z] ++ VERSION=v14.21.2
+[2023-07-26T06:23:20.859Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] ++ '[' _v14.21.2 = _system ']'
+[2023-07-26T06:23:20.859Z] ++ '[' _v14.21.2 = _∞ ']'
+[2023-07-26T06:23:20.859Z] ++ '[' v14.21.2 = N/A ']'
+[2023-07-26T06:23:20.859Z] ++ nvm_ensure_version_installed v14.21.2 0
+[2023-07-26T06:23:20.859Z] ++ local PROVIDED_VERSION
+[2023-07-26T06:23:20.859Z] ++ PROVIDED_VERSION=v14.21.2
+[2023-07-26T06:23:20.859Z] ++ local IS_VERSION_FROM_NVMRC
+[2023-07-26T06:23:20.859Z] ++ IS_VERSION_FROM_NVMRC=0
+[2023-07-26T06:23:20.859Z] ++ '[' v14.21.2 = system ']'
+[2023-07-26T06:23:20.859Z] ++ local LOCAL_VERSION
+[2023-07-26T06:23:20.859Z] ++ local EXIT_CODE
+[2023-07-26T06:23:20.859Z] +++ nvm_version v14.21.2
+[2023-07-26T06:23:20.859Z] +++ local PATTERN
+[2023-07-26T06:23:20.859Z] +++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.859Z] +++ local VERSION
+[2023-07-26T06:23:20.859Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] +++ '[' v14.21.2 = current ']'
+[2023-07-26T06:23:20.859Z] +++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:20.859Z] ++++ nvm_node_prefix
+[2023-07-26T06:23:20.859Z] ++++ nvm_echo node
+[2023-07-26T06:23:20.859Z] ++++ command printf '%s\n' node
+[2023-07-26T06:23:20.859Z] +++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:20.859Z] +++ case "_${PATTERN}" in
+[2023-07-26T06:23:20.859Z] ++++ nvm_ls v14.21.2
+[2023-07-26T06:23:20.859Z] ++++ command tail -1
+[2023-07-26T06:23:20.859Z] ++++ local PATTERN
+[2023-07-26T06:23:20.859Z] ++++ tail -1
+[2023-07-26T06:23:20.859Z] ++++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.859Z] ++++ local VERSIONS
+[2023-07-26T06:23:20.859Z] ++++ VERSIONS=
+[2023-07-26T06:23:20.859Z] ++++ '[' v14.21.2 = current ']'
+[2023-07-26T06:23:20.859Z] ++++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:20.859Z] +++++ nvm_iojs_prefix
+[2023-07-26T06:23:20.859Z] +++++ nvm_echo iojs
+[2023-07-26T06:23:20.859Z] +++++ command printf '%s\n' iojs
+[2023-07-26T06:23:20.859Z] ++++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:20.859Z] ++++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:20.859Z] +++++ nvm_node_prefix
+[2023-07-26T06:23:20.859Z] +++++ nvm_echo node
+[2023-07-26T06:23:20.859Z] +++++ command printf '%s\n' node
+[2023-07-26T06:23:20.859Z] ++++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:20.859Z] ++++ local NVM_VERSION_DIR_IOJS
+[2023-07-26T06:23:20.859Z] +++++ nvm_version_dir iojs
+[2023-07-26T06:23:20.859Z] +++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.859Z] +++++ NVM_WHICH_DIR=iojs
+[2023-07-26T06:23:20.859Z] +++++ '[' -z iojs ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' iojs = new ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' _iojs = _iojs ']'
+[2023-07-26T06:23:20.859Z] +++++ nvm_echo /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.859Z] +++++ command printf '%s\n' /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.859Z] ++++ NVM_VERSION_DIR_IOJS=/home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:20.859Z] ++++ local NVM_VERSION_DIR_NEW
+[2023-07-26T06:23:20.859Z] +++++ nvm_version_dir new
+[2023-07-26T06:23:20.859Z] +++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.859Z] +++++ NVM_WHICH_DIR=new
+[2023-07-26T06:23:20.859Z] +++++ '[' -z new ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' new = new ']'
+[2023-07-26T06:23:20.859Z] +++++ nvm_echo /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.859Z] +++++ command printf '%s\n' /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.859Z] ++++ NVM_VERSION_DIR_NEW=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.859Z] ++++ local NVM_VERSION_DIR_OLD
+[2023-07-26T06:23:20.859Z] +++++ nvm_version_dir old
+[2023-07-26T06:23:20.859Z] +++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.859Z] +++++ NVM_WHICH_DIR=old
+[2023-07-26T06:23:20.859Z] +++++ '[' -z old ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' old = new ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' _old = _iojs ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' _old = _old ']'
+[2023-07-26T06:23:20.859Z] +++++ nvm_echo /home/jenkins/.nvm
+[2023-07-26T06:23:20.859Z] +++++ command printf '%s\n' /home/jenkins/.nvm
+[2023-07-26T06:23:20.859Z] ++++ NVM_VERSION_DIR_OLD=/home/jenkins/.nvm
+[2023-07-26T06:23:20.859Z] ++++ case "${PATTERN}" in
+[2023-07-26T06:23:20.859Z] ++++ nvm_resolve_local_alias v14.21.2
+[2023-07-26T06:23:20.859Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] ++++ local VERSION
+[2023-07-26T06:23:20.859Z] ++++ local EXIT_CODE
+[2023-07-26T06:23:20.859Z] +++++ nvm_resolve_alias v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] +++++ local PATTERN
+[2023-07-26T06:23:20.859Z] +++++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ local ALIAS
+[2023-07-26T06:23:20.859Z] +++++ ALIAS=v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ local ALIAS_TEMP
+[2023-07-26T06:23:20.859Z] +++++ local SEEN_ALIASES
+[2023-07-26T06:23:20.859Z] +++++ SEEN_ALIASES=v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ true
+[2023-07-26T06:23:20.859Z] ++++++ nvm_alias v14.21.2
+[2023-07-26T06:23:20.859Z] ++++++ nvm_echo
+[2023-07-26T06:23:20.859Z] ++++++ command printf '%s\n' ''
+[2023-07-26T06:23:20.859Z] +++++ ALIAS_TEMP=
+[2023-07-26T06:23:20.859Z] +++++ '[' -z '' ']'
+[2023-07-26T06:23:20.859Z] +++++ break
+[2023-07-26T06:23:20.859Z] +++++ '[' -n v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] +++++ '[' _v14.21.2 '!=' _v14.21.2 ']'
+[2023-07-26T06:23:20.859Z] +++++ nvm_validate_implicit_alias v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ return 2
+[2023-07-26T06:23:20.859Z] ++++ VERSION=
+[2023-07-26T06:23:20.859Z] ++++ EXIT_CODE=2
+[2023-07-26T06:23:20.859Z] ++++ '[' -z '' ']'
+[2023-07-26T06:23:20.859Z] ++++ return 2
+[2023-07-26T06:23:20.859Z] +++++ nvm_ensure_version_prefix v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ local NVM_VERSION
+[2023-07-26T06:23:20.859Z] ++++++ nvm_strip_iojs_prefix v14.21.2
+[2023-07-26T06:23:20.859Z] ++++++ command sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:20.859Z] ++++++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:20.859Z] ++++++ sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:20.859Z] +++++++ nvm_iojs_prefix
+[2023-07-26T06:23:20.859Z] +++++++ nvm_echo iojs
+[2023-07-26T06:23:20.859Z] +++++++ command printf '%s\n' iojs
+[2023-07-26T06:23:20.859Z] ++++++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:20.859Z] ++++++ '[' v14.21.2 = iojs ']'
+[2023-07-26T06:23:20.859Z] ++++++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.859Z] ++++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ NVM_VERSION=v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ nvm_is_iojs_version v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ case "${1-}" in
+[2023-07-26T06:23:20.859Z] +++++ return 1
+[2023-07-26T06:23:20.859Z] +++++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.859Z] ++++ PATTERN=v14.21.2
+[2023-07-26T06:23:20.859Z] ++++ '[' v14.21.2 = N/A ']'
+[2023-07-26T06:23:20.859Z] ++++ local NVM_PATTERN_STARTS_WITH_V
+[2023-07-26T06:23:20.859Z] ++++ case $PATTERN in
+[2023-07-26T06:23:20.859Z] ++++ NVM_PATTERN_STARTS_WITH_V=true
+[2023-07-26T06:23:20.859Z] ++++ '[' true = true ']'
+[2023-07-26T06:23:20.859Z] +++++ nvm_num_version_groups v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ local VERSION
+[2023-07-26T06:23:20.859Z] +++++ VERSION=v14.21.2
+[2023-07-26T06:23:20.859Z] +++++ VERSION=14.21.2
+[2023-07-26T06:23:20.859Z] +++++ VERSION=14.21.2
+[2023-07-26T06:23:20.859Z] +++++ '[' -z 14.21.2 ']'
+[2023-07-26T06:23:20.859Z] +++++ local NVM_NUM_DOTS
+[2023-07-26T06:23:20.859Z] ++++++ nvm_echo 14.21.2
+[2023-07-26T06:23:20.859Z] ++++++ command printf '%s\n' 14.21.2
+[2023-07-26T06:23:20.859Z] ++++++ command sed -e 's/[^\.]//g'
+[2023-07-26T06:23:20.860Z] ++++++ sed -e 's/[^\.]//g'
+[2023-07-26T06:23:20.860Z] +++++ NVM_NUM_DOTS=..
+[2023-07-26T06:23:20.860Z] +++++ local NVM_NUM_GROUPS
+[2023-07-26T06:23:20.860Z] +++++ NVM_NUM_GROUPS=...
+[2023-07-26T06:23:20.860Z] +++++ nvm_echo 3
+[2023-07-26T06:23:20.860Z] +++++ command printf '%s\n' 3
+[2023-07-26T06:23:20.860Z] ++++ '[' _3 = _3 ']'
+[2023-07-26T06:23:20.860Z] ++++ nvm_is_version_installed v14.21.2
+[2023-07-26T06:23:20.860Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.860Z] ++++ local NVM_NODE_BINARY
+[2023-07-26T06:23:20.860Z] ++++ NVM_NODE_BINARY=node
+[2023-07-26T06:23:20.860Z] +++++ nvm_get_os
+[2023-07-26T06:23:20.860Z] +++++ local NVM_UNAME
+[2023-07-26T06:23:20.860Z] ++++++ command uname -a
+[2023-07-26T06:23:20.860Z] ++++++ uname -a
+[2023-07-26T06:23:20.860Z] +++++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:20.860Z] +++++ local NVM_OS
+[2023-07-26T06:23:20.860Z] +++++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:20.860Z] +++++ NVM_OS=linux
+[2023-07-26T06:23:20.860Z] +++++ nvm_echo linux
+[2023-07-26T06:23:20.860Z] +++++ command printf '%s\n' linux
+[2023-07-26T06:23:20.860Z] ++++ '[' _linux = _win ']'
+[2023-07-26T06:23:20.860Z] +++++ nvm_version_path v14.21.2
+[2023-07-26T06:23:20.860Z] ++++ '[' -x /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:20.860Z] ++++ return 0
+[2023-07-26T06:23:20.860Z] ++++ VERSIONS=v14.21.2
+[2023-07-26T06:23:20.860Z] ++++ '[' '' = true ']'
+[2023-07-26T06:23:20.860Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.860Z] ++++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.860Z] ++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.860Z] +++ VERSION=v14.21.2
+[2023-07-26T06:23:20.860Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.860Z] +++ '[' _v14.21.2 = _N/A ']'
+[2023-07-26T06:23:20.860Z] +++ nvm_echo v14.21.2
+[2023-07-26T06:23:20.860Z] +++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:20.860Z] ++ LOCAL_VERSION=v14.21.2
+[2023-07-26T06:23:20.860Z] ++ EXIT_CODE=0
+[2023-07-26T06:23:20.860Z] ++ local NVM_VERSION_DIR
+[2023-07-26T06:23:20.860Z] ++ '[' 0 '!=' 0 ']'
+[2023-07-26T06:23:20.860Z] ++ nvm_is_version_installed v14.21.2
+[2023-07-26T06:23:20.860Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.860Z] ++ local NVM_NODE_BINARY
+[2023-07-26T06:23:20.860Z] ++ NVM_NODE_BINARY=node
+[2023-07-26T06:23:20.860Z] +++ nvm_get_os
+[2023-07-26T06:23:20.860Z] +++ local NVM_UNAME
+[2023-07-26T06:23:20.860Z] ++++ command uname -a
+[2023-07-26T06:23:20.860Z] ++++ uname -a
+[2023-07-26T06:23:20.860Z] +++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:20.860Z] +++ local NVM_OS
+[2023-07-26T06:23:20.860Z] +++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:20.860Z] +++ NVM_OS=linux
+[2023-07-26T06:23:20.860Z] +++ nvm_echo linux
+[2023-07-26T06:23:20.860Z] +++ command printf '%s\n' linux
+[2023-07-26T06:23:20.860Z] ++ '[' _linux = _win ']'
+[2023-07-26T06:23:20.860Z] +++ nvm_version_path v14.21.2
+[2023-07-26T06:23:20.860Z] ++ '[' -x /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:20.860Z] ++ return 0
+[2023-07-26T06:23:20.860Z] ++ local NVM_VERSION_DIR
+[2023-07-26T06:23:20.860Z] +++ nvm_version_path v14.21.2
+[2023-07-26T06:23:20.860Z] +++ local VERSION
+[2023-07-26T06:23:20.860Z] +++ VERSION=v14.21.2
+[2023-07-26T06:23:20.860Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:20.860Z] +++ nvm_is_iojs_version v14.21.2
+[2023-07-26T06:23:20.860Z] +++ case "${1-}" in
+[2023-07-26T06:23:20.860Z] +++ return 1
+[2023-07-26T06:23:20.860Z] +++ nvm_version_greater 0.12.0 v14.21.2
+[2023-07-26T06:23:20.860Z] +++ command awk 'BEGIN {
+[2023-07-26T06:23:20.860Z]     if (ARGV[1] == "" || ARGV[2] == "") exit(1)
+[2023-07-26T06:23:20.860Z]     split(ARGV[1], a, /\./);
+[2023-07-26T06:23:20.860Z]     split(ARGV[2], b, /\./);
+[2023-07-26T06:23:20.860Z]     for (i=1; i<=3; i++) {
+[2023-07-26T06:23:20.860Z]       if (a[i] && a[i] !~ /^[0-9]+$/) exit(2);
+[2023-07-26T06:23:20.860Z]       if (b[i] && b[i] !~ /^[0-9]+$/) { exit(0); }
+[2023-07-26T06:23:20.860Z]       if (a[i] < b[i]) exit(3);
+[2023-07-26T06:23:20.860Z]       else if (a[i] > b[i]) exit(0);
+[2023-07-26T06:23:20.860Z]     }
+[2023-07-26T06:23:20.860Z]     exit(4)
+[2023-07-26T06:23:20.860Z]   }' 0.12.0 14.21.2
+[2023-07-26T06:23:20.860Z] +++ awk 'BEGIN {
+[2023-07-26T06:23:20.860Z]     if (ARGV[1] == "" || ARGV[2] == "") exit(1)
+[2023-07-26T06:23:20.860Z]     split(ARGV[1], a, /\./);
+[2023-07-26T06:23:20.860Z]     split(ARGV[2], b, /\./);
+[2023-07-26T06:23:20.860Z]     for (i=1; i<=3; i++) {
+[2023-07-26T06:23:20.860Z]       if (a[i] && a[i] !~ /^[0-9]+$/) exit(2);
+[2023-07-26T06:23:20.860Z]       if (b[i] && b[i] !~ /^[0-9]+$/) { exit(0); }
+[2023-07-26T06:23:20.860Z]       if (a[i] < b[i]) exit(3);
+[2023-07-26T06:23:20.860Z]       else if (a[i] > b[i]) exit(0);
+[2023-07-26T06:23:20.860Z]     }
+[2023-07-26T06:23:20.860Z]     exit(4)
+[2023-07-26T06:23:20.860Z]   }' 0.12.0 14.21.2
+[2023-07-26T06:23:20.860Z] ++++ nvm_version_dir new
+[2023-07-26T06:23:20.860Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:20.860Z] ++++ NVM_WHICH_DIR=new
+[2023-07-26T06:23:20.860Z] ++++ '[' -z new ']'
+[2023-07-26T06:23:20.860Z] ++++ '[' new = new ']'
+[2023-07-26T06:23:20.860Z] ++++ nvm_echo /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.860Z] ++++ command printf '%s\n' /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:20.860Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.860Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.860Z] ++ NVM_VERSION_DIR=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.860Z] +++ nvm_change_path /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin /bin /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.860Z] +++ '[' -z /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin ']'
+[2023-07-26T06:23:20.860Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ nvm_grep -q '/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.860Z] +++ command grep -q '/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ grep -q '/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ nvm_grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.860Z] +++ command grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.860Z] +++ command grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:20.860Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.860Z] +++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:20.861Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.861Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.861Z] +++ command grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:20.861Z] +++ grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:20.861Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.861Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.861Z] +++ command sed -e 's#/home/jenkins/.nvm/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#'
+[2023-07-26T06:23:20.861Z] +++ sed -e 's#/home/jenkins/.nvm/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#'
+[2023-07-26T06:23:20.861Z] ++ PATH=/home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:20.861Z] ++ nvm_has manpath
+[2023-07-26T06:23:20.861Z] ++ type manpath
+[2023-07-26T06:23:20.861Z] ++ '[' -z '' ']'
+[2023-07-26T06:23:20.861Z] ++ local MANPATH
+[2023-07-26T06:23:20.861Z] +++ manpath
+[2023-07-26T06:23:20.861Z] ++ MANPATH=/home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.861Z] +++ nvm_change_path /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man /share/man /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:20.861Z] +++ '[' -z /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man ']'
+[2023-07-26T06:23:20.861Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.861Z] +++ nvm_grep -q '/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:20.861Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.861Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.861Z] +++ command grep -q '/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:20.861Z] +++ grep -q '/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:20.861Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.861Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.861Z] +++ nvm_grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:20.861Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.861Z] +++ command grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:20.861Z] +++ grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:20.861Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.862Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.862Z] +++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:20.862Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.862Z] +++ command grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:20.862Z] +++ grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:20.862Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.862Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:20.862Z] +++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:20.862Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:20.862Z] +++ command grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:20.862Z] +++ grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.138Z] +++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.138Z] +++ command sed -e 's#/home/jenkins/.nvm/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#'
+[2023-07-26T06:23:21.138Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.138Z] +++ sed -e 's#/home/jenkins/.nvm/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#'
+[2023-07-26T06:23:21.138Z] ++ MANPATH=/home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.138Z] ++ export MANPATH
+[2023-07-26T06:23:21.138Z] ++ export PATH
+[2023-07-26T06:23:21.138Z] ++ hash -r
+[2023-07-26T06:23:21.138Z] ++ export NVM_BIN=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:21.138Z] ++ NVM_BIN=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:21.138Z] ++ export NVM_INC=/home/jenkins/.nvm/versions/node/v14.21.2/include/node
+[2023-07-26T06:23:21.138Z] ++ NVM_INC=/home/jenkins/.nvm/versions/node/v14.21.2/include/node
+[2023-07-26T06:23:21.138Z] ++ '[' '' = true ']'
+[2023-07-26T06:23:21.138Z] ++ local NVM_USE_OUTPUT
+[2023-07-26T06:23:21.138Z] ++ NVM_USE_OUTPUT=
+[2023-07-26T06:23:21.138Z] ++ '[' 1 -ne 1 ']'
+[2023-07-26T06:23:21.138Z] ++ '[' _v14.21.2 '!=' _system ']'
+[2023-07-26T06:23:21.138Z] ++ local NVM_USE_CMD
+[2023-07-26T06:23:21.138Z] ++ NVM_USE_CMD='nvm use --delete-prefix'
+[2023-07-26T06:23:21.138Z] ++ '[' -n v14.21.2 ']'
+[2023-07-26T06:23:21.138Z] ++ NVM_USE_CMD='nvm use --delete-prefix v14.21.2'
+[2023-07-26T06:23:21.138Z] ++ '[' 1 -eq 1 ']'
+[2023-07-26T06:23:21.138Z] ++ NVM_USE_CMD='nvm use --delete-prefix v14.21.2 --silent'
+[2023-07-26T06:23:21.138Z] ++ nvm_die_on_prefix 0 'nvm use --delete-prefix v14.21.2 --silent' /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.138Z] ++ local NVM_DELETE_PREFIX
+[2023-07-26T06:23:21.138Z] ++ NVM_DELETE_PREFIX=0
+[2023-07-26T06:23:21.138Z] ++ case "${NVM_DELETE_PREFIX}" in
+[2023-07-26T06:23:21.138Z] ++ local NVM_COMMAND
+[2023-07-26T06:23:21.138Z] ++ NVM_COMMAND='nvm use --delete-prefix v14.21.2 --silent'
+[2023-07-26T06:23:21.138Z] ++ local NVM_VERSION_DIR
+[2023-07-26T06:23:21.138Z] ++ NVM_VERSION_DIR=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.138Z] ++ '[' -z 'nvm use --delete-prefix v14.21.2 --silent' ']'
+[2023-07-26T06:23:21.138Z] ++ '[' -z /home/jenkins/.nvm/versions/node/v14.21.2 ']'
+[2023-07-26T06:23:21.138Z] ++ '[' -n '' ']'
+[2023-07-26T06:23:21.138Z] ++ local NVM_OS
+[2023-07-26T06:23:21.138Z] +++ nvm_get_os
+[2023-07-26T06:23:21.138Z] +++ local NVM_UNAME
+[2023-07-26T06:23:21.138Z] ++++ command uname -a
+[2023-07-26T06:23:21.138Z] ++++ uname -a
+[2023-07-26T06:23:21.138Z] +++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:21.138Z] +++ local NVM_OS
+[2023-07-26T06:23:21.138Z] +++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:21.138Z] +++ NVM_OS=linux
+[2023-07-26T06:23:21.138Z] +++ nvm_echo linux
+[2023-07-26T06:23:21.138Z] +++ command printf '%s\n' linux
+[2023-07-26T06:23:21.138Z] ++ NVM_OS=linux
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPM_CONFIG_x_PREFIX_ENV
+[2023-07-26T06:23:21.138Z] +++ command awk 'BEGIN { for (name in ENVIRON) if (toupper(name) == "NPM_CONFIG_PREFIX") { print name; break } }'
+[2023-07-26T06:23:21.138Z] +++ awk 'BEGIN { for (name in ENVIRON) if (toupper(name) == "NPM_CONFIG_PREFIX") { print name; break } }'
+[2023-07-26T06:23:21.138Z] ++ NVM_NPM_CONFIG_x_PREFIX_ENV=
+[2023-07-26T06:23:21.138Z] ++ '[' -n '' ']'
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPM_BUILTIN_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPM_BUILTIN_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc
+[2023-07-26T06:23:21.138Z] ++ nvm_npmrc_bad_news_bears /home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc
+[2023-07-26T06:23:21.138Z] ++ '[' -n /home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ '[' -f /home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ nvm_grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:21.138Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.138Z] ++ command grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:21.138Z] ++ grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:21.138Z] ++ return 1
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPM_GLOBAL_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPM_GLOBAL_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc
+[2023-07-26T06:23:21.138Z] ++ nvm_npmrc_bad_news_bears /home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc
+[2023-07-26T06:23:21.138Z] ++ '[' -n /home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ '[' -f /home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ return 1
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPM_USER_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPM_USER_NPMRC=/home/jenkins/.npmrc
+[2023-07-26T06:23:21.138Z] ++ nvm_npmrc_bad_news_bears /home/jenkins/.npmrc
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPMRC=/home/jenkins/.npmrc
+[2023-07-26T06:23:21.138Z] ++ '[' -n /home/jenkins/.npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ '[' -f /home/jenkins/.npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ nvm_grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:21.138Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.138Z] ++ command grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:21.138Z] ++ grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:21.138Z] ++ return 1
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPM_PROJECT_NPMRC
+[2023-07-26T06:23:21.138Z] +++ nvm_find_project_dir
+[2023-07-26T06:23:21.138Z] +++ local path_
+[2023-07-26T06:23:21.138Z] +++ path_=/home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:21.138Z] +++ '[' /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex '!=' '' ']'
+[2023-07-26T06:23:21.138Z] +++ '[' '!' -f /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/package.json ']'
+[2023-07-26T06:23:21.138Z] +++ nvm_echo /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:21.138Z] +++ command printf '%s\n' /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:21.138Z] ++ NVM_NPM_PROJECT_NPMRC=/home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc
+[2023-07-26T06:23:21.138Z] ++ nvm_npmrc_bad_news_bears /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc
+[2023-07-26T06:23:21.138Z] ++ local NVM_NPMRC
+[2023-07-26T06:23:21.138Z] ++ NVM_NPMRC=/home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc
+[2023-07-26T06:23:21.138Z] ++ '[' -n /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ '[' -f /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc ']'
+[2023-07-26T06:23:21.138Z] ++ return 1
+[2023-07-26T06:23:21.138Z] ++ '[' -n '' ']'
+[2023-07-26T06:23:21.138Z] ++ EXIT_CODE=0
+[2023-07-26T06:23:21.138Z] ++ set -e
+[2023-07-26T06:23:21.138Z] ++ return 0
+[2023-07-26T06:23:21.138Z] + nvm use 14
+[2023-07-26T06:23:21.138Z] + '[' 2 -lt 1 ']'
+[2023-07-26T06:23:21.138Z] + local DEFAULT_IFS
+[2023-07-26T06:23:21.138Z] ++ command tr t '\t'
+[2023-07-26T06:23:21.138Z] ++ nvm_echo t
+[2023-07-26T06:23:21.138Z] ++ tr t '\t'
+[2023-07-26T06:23:21.138Z] ++ command printf '%s\n' t
+[2023-07-26T06:23:21.138Z] + DEFAULT_IFS=' 	
+[2023-07-26T06:23:21.138Z] '
+[2023-07-26T06:23:21.138Z] + '[' hxB '!=' ehxB ']'
+[2023-07-26T06:23:21.138Z] + set +e
+[2023-07-26T06:23:21.138Z] + local EXIT_CODE
+[2023-07-26T06:23:21.138Z] + IFS=' 	
+[2023-07-26T06:23:21.138Z] '
+[2023-07-26T06:23:21.138Z] + nvm use 14
+[2023-07-26T06:23:21.138Z] + '[' 2 -lt 1 ']'
+[2023-07-26T06:23:21.138Z] + local DEFAULT_IFS
+[2023-07-26T06:23:21.138Z] ++ nvm_echo t
+[2023-07-26T06:23:21.138Z] ++ command tr t '\t'
+[2023-07-26T06:23:21.139Z] ++ tr t '\t'
+[2023-07-26T06:23:21.139Z] ++ command printf '%s\n' t
+[2023-07-26T06:23:21.139Z] + DEFAULT_IFS=' 	
+[2023-07-26T06:23:21.139Z] '
+[2023-07-26T06:23:21.139Z] + '[' hxB '!=' hxB ']'
+[2023-07-26T06:23:21.139Z] + '[' hxB '!=' hxB ']'
+[2023-07-26T06:23:21.139Z] + '[' -n /usr/bin/sh ']'
+[2023-07-26T06:23:21.139Z] + '[' hxB '!=' hxB ']'
+[2023-07-26T06:23:21.139Z] + '[' ' 	
+[2023-07-26T06:23:21.139Z] ' '!=' ' 	
+[2023-07-26T06:23:21.139Z] ' ']'
+[2023-07-26T06:23:21.139Z] + local i
+[2023-07-26T06:23:21.139Z] + for i in '"$@"'
+[2023-07-26T06:23:21.139Z] + case $i in
+[2023-07-26T06:23:21.139Z] + for i in '"$@"'
+[2023-07-26T06:23:21.139Z] + case $i in
+[2023-07-26T06:23:21.139Z] + local COMMAND
+[2023-07-26T06:23:21.139Z] + COMMAND=use
+[2023-07-26T06:23:21.139Z] + shift
+[2023-07-26T06:23:21.139Z] + local VERSION
+[2023-07-26T06:23:21.139Z] + local ADDITIONAL_PARAMETERS
+[2023-07-26T06:23:21.139Z] + case $COMMAND in
+[2023-07-26T06:23:21.139Z] + local PROVIDED_VERSION
+[2023-07-26T06:23:21.139Z] + local NVM_SILENT
+[2023-07-26T06:23:21.139Z] + local NVM_SILENT_ARG
+[2023-07-26T06:23:21.139Z] + local NVM_DELETE_PREFIX
+[2023-07-26T06:23:21.139Z] + NVM_DELETE_PREFIX=0
+[2023-07-26T06:23:21.139Z] + local NVM_LTS
+[2023-07-26T06:23:21.139Z] + local IS_VERSION_FROM_NVMRC
+[2023-07-26T06:23:21.139Z] + IS_VERSION_FROM_NVMRC=0
+[2023-07-26T06:23:21.139Z] + '[' 1 -ne 0 ']'
+[2023-07-26T06:23:21.139Z] + case "$1" in
+[2023-07-26T06:23:21.139Z] + '[' -n 14 ']'
+[2023-07-26T06:23:21.139Z] + PROVIDED_VERSION=14
+[2023-07-26T06:23:21.139Z] + shift
+[2023-07-26T06:23:21.139Z] + '[' 0 -ne 0 ']'
+[2023-07-26T06:23:21.139Z] + '[' -n '' ']'
+[2023-07-26T06:23:21.139Z] + '[' -z 14 ']'
+[2023-07-26T06:23:21.139Z] ++ nvm_match_version 14
+[2023-07-26T06:23:21.139Z] ++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:21.139Z] +++ nvm_iojs_prefix
+[2023-07-26T06:23:21.139Z] +++ nvm_echo iojs
+[2023-07-26T06:23:21.139Z] +++ command printf '%s\n' iojs
+[2023-07-26T06:23:21.139Z] ++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:21.139Z] ++ local PROVIDED_VERSION
+[2023-07-26T06:23:21.139Z] ++ PROVIDED_VERSION=14
+[2023-07-26T06:23:21.139Z] ++ case "_${PROVIDED_VERSION}" in
+[2023-07-26T06:23:21.139Z] ++ nvm_version 14
+[2023-07-26T06:23:21.139Z] ++ local PATTERN
+[2023-07-26T06:23:21.139Z] ++ PATTERN=14
+[2023-07-26T06:23:21.139Z] ++ local VERSION
+[2023-07-26T06:23:21.139Z] ++ '[' -z 14 ']'
+[2023-07-26T06:23:21.139Z] ++ '[' 14 = current ']'
+[2023-07-26T06:23:21.139Z] ++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:21.139Z] +++ nvm_node_prefix
+[2023-07-26T06:23:21.139Z] +++ nvm_echo node
+[2023-07-26T06:23:21.139Z] +++ command printf '%s\n' node
+[2023-07-26T06:23:21.139Z] ++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:21.139Z] ++ case "_${PATTERN}" in
+[2023-07-26T06:23:21.139Z] +++ nvm_ls 14
+[2023-07-26T06:23:21.139Z] +++ local PATTERN
+[2023-07-26T06:23:21.139Z] +++ PATTERN=14
+[2023-07-26T06:23:21.139Z] +++ local VERSIONS
+[2023-07-26T06:23:21.139Z] +++ VERSIONS=
+[2023-07-26T06:23:21.139Z] +++ '[' 14 = current ']'
+[2023-07-26T06:23:21.139Z] +++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:21.139Z] +++ command tail -1
+[2023-07-26T06:23:21.139Z] +++ tail -1
+[2023-07-26T06:23:21.139Z] ++++ nvm_iojs_prefix
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo iojs
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' iojs
+[2023-07-26T06:23:21.139Z] +++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:21.139Z] +++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:21.139Z] ++++ nvm_node_prefix
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo node
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' node
+[2023-07-26T06:23:21.139Z] +++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:21.139Z] +++ local NVM_VERSION_DIR_IOJS
+[2023-07-26T06:23:21.139Z] ++++ nvm_version_dir iojs
+[2023-07-26T06:23:21.139Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.139Z] ++++ NVM_WHICH_DIR=iojs
+[2023-07-26T06:23:21.139Z] ++++ '[' -z iojs ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' iojs = new ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' _iojs = _iojs ']'
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.139Z] +++ NVM_VERSION_DIR_IOJS=/home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.139Z] +++ local NVM_VERSION_DIR_NEW
+[2023-07-26T06:23:21.139Z] ++++ nvm_version_dir new
+[2023-07-26T06:23:21.139Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.139Z] ++++ NVM_WHICH_DIR=new
+[2023-07-26T06:23:21.139Z] ++++ '[' -z new ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' new = new ']'
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.139Z] +++ NVM_VERSION_DIR_NEW=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.139Z] +++ local NVM_VERSION_DIR_OLD
+[2023-07-26T06:23:21.139Z] ++++ nvm_version_dir old
+[2023-07-26T06:23:21.139Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.139Z] ++++ NVM_WHICH_DIR=old
+[2023-07-26T06:23:21.139Z] ++++ '[' -z old ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' old = new ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' _old = _iojs ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' _old = _old ']'
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo /home/jenkins/.nvm
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' /home/jenkins/.nvm
+[2023-07-26T06:23:21.139Z] +++ NVM_VERSION_DIR_OLD=/home/jenkins/.nvm
+[2023-07-26T06:23:21.139Z] +++ case "${PATTERN}" in
+[2023-07-26T06:23:21.139Z] +++ nvm_resolve_local_alias 14
+[2023-07-26T06:23:21.139Z] +++ '[' -z 14 ']'
+[2023-07-26T06:23:21.139Z] +++ local VERSION
+[2023-07-26T06:23:21.139Z] +++ local EXIT_CODE
+[2023-07-26T06:23:21.139Z] ++++ nvm_resolve_alias 14
+[2023-07-26T06:23:21.139Z] ++++ '[' -z 14 ']'
+[2023-07-26T06:23:21.139Z] ++++ local PATTERN
+[2023-07-26T06:23:21.139Z] ++++ PATTERN=14
+[2023-07-26T06:23:21.139Z] ++++ local ALIAS
+[2023-07-26T06:23:21.139Z] ++++ ALIAS=14
+[2023-07-26T06:23:21.139Z] ++++ local ALIAS_TEMP
+[2023-07-26T06:23:21.139Z] ++++ local SEEN_ALIASES
+[2023-07-26T06:23:21.139Z] ++++ SEEN_ALIASES=14
+[2023-07-26T06:23:21.139Z] ++++ true
+[2023-07-26T06:23:21.139Z] +++++ nvm_alias 14
+[2023-07-26T06:23:21.139Z] +++++ nvm_echo
+[2023-07-26T06:23:21.139Z] +++++ command printf '%s\n' ''
+[2023-07-26T06:23:21.139Z] ++++ ALIAS_TEMP=
+[2023-07-26T06:23:21.139Z] ++++ '[' -z '' ']'
+[2023-07-26T06:23:21.139Z] ++++ break
+[2023-07-26T06:23:21.139Z] ++++ '[' -n 14 ']'
+[2023-07-26T06:23:21.139Z] ++++ '[' _14 '!=' _14 ']'
+[2023-07-26T06:23:21.139Z] ++++ nvm_validate_implicit_alias 14
+[2023-07-26T06:23:21.139Z] ++++ return 2
+[2023-07-26T06:23:21.139Z] +++ VERSION=
+[2023-07-26T06:23:21.139Z] +++ EXIT_CODE=2
+[2023-07-26T06:23:21.139Z] +++ '[' -z '' ']'
+[2023-07-26T06:23:21.139Z] +++ return 2
+[2023-07-26T06:23:21.139Z] ++++ nvm_ensure_version_prefix 14
+[2023-07-26T06:23:21.139Z] ++++ local NVM_VERSION
+[2023-07-26T06:23:21.139Z] +++++ nvm_strip_iojs_prefix 14
+[2023-07-26T06:23:21.139Z] +++++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:21.139Z] +++++ command sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:21.139Z] +++++ sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:21.139Z] ++++++ nvm_iojs_prefix
+[2023-07-26T06:23:21.139Z] ++++++ nvm_echo iojs
+[2023-07-26T06:23:21.139Z] ++++++ command printf '%s\n' iojs
+[2023-07-26T06:23:21.139Z] +++++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:21.139Z] +++++ '[' 14 = iojs ']'
+[2023-07-26T06:23:21.139Z] +++++ nvm_echo 14
+[2023-07-26T06:23:21.139Z] +++++ command printf '%s\n' 14
+[2023-07-26T06:23:21.139Z] ++++ NVM_VERSION=v14
+[2023-07-26T06:23:21.139Z] ++++ nvm_is_iojs_version 14
+[2023-07-26T06:23:21.139Z] ++++ case "${1-}" in
+[2023-07-26T06:23:21.139Z] ++++ return 1
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo v14
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' v14
+[2023-07-26T06:23:21.139Z] +++ PATTERN=v14
+[2023-07-26T06:23:21.139Z] +++ '[' v14 = N/A ']'
+[2023-07-26T06:23:21.139Z] +++ local NVM_PATTERN_STARTS_WITH_V
+[2023-07-26T06:23:21.139Z] +++ case $PATTERN in
+[2023-07-26T06:23:21.139Z] +++ NVM_PATTERN_STARTS_WITH_V=true
+[2023-07-26T06:23:21.139Z] +++ '[' true = true ']'
+[2023-07-26T06:23:21.139Z] ++++ nvm_num_version_groups v14
+[2023-07-26T06:23:21.139Z] ++++ local VERSION
+[2023-07-26T06:23:21.139Z] ++++ VERSION=v14
+[2023-07-26T06:23:21.139Z] ++++ VERSION=14
+[2023-07-26T06:23:21.139Z] ++++ VERSION=14
+[2023-07-26T06:23:21.139Z] ++++ '[' -z 14 ']'
+[2023-07-26T06:23:21.139Z] ++++ local NVM_NUM_DOTS
+[2023-07-26T06:23:21.139Z] +++++ nvm_echo 14
+[2023-07-26T06:23:21.139Z] +++++ command printf '%s\n' 14
+[2023-07-26T06:23:21.139Z] +++++ command sed -e 's/[^\.]//g'
+[2023-07-26T06:23:21.139Z] +++++ sed -e 's/[^\.]//g'
+[2023-07-26T06:23:21.139Z] ++++ NVM_NUM_DOTS=
+[2023-07-26T06:23:21.139Z] ++++ local NVM_NUM_GROUPS
+[2023-07-26T06:23:21.139Z] ++++ NVM_NUM_GROUPS=.
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo 1
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' 1
+[2023-07-26T06:23:21.139Z] +++ '[' _1 = _3 ']'
+[2023-07-26T06:23:21.139Z] +++ case "${PATTERN}" in
+[2023-07-26T06:23:21.139Z] +++ local NUM_VERSION_GROUPS
+[2023-07-26T06:23:21.139Z] ++++ nvm_num_version_groups v14
+[2023-07-26T06:23:21.139Z] ++++ local VERSION
+[2023-07-26T06:23:21.139Z] ++++ VERSION=v14
+[2023-07-26T06:23:21.139Z] ++++ VERSION=14
+[2023-07-26T06:23:21.139Z] ++++ VERSION=14
+[2023-07-26T06:23:21.139Z] ++++ '[' -z 14 ']'
+[2023-07-26T06:23:21.139Z] ++++ local NVM_NUM_DOTS
+[2023-07-26T06:23:21.139Z] +++++ nvm_echo 14
+[2023-07-26T06:23:21.139Z] +++++ command printf '%s\n' 14
+[2023-07-26T06:23:21.139Z] +++++ command sed -e 's/[^\.]//g'
+[2023-07-26T06:23:21.139Z] +++++ sed -e 's/[^\.]//g'
+[2023-07-26T06:23:21.139Z] ++++ NVM_NUM_DOTS=
+[2023-07-26T06:23:21.139Z] ++++ local NVM_NUM_GROUPS
+[2023-07-26T06:23:21.139Z] ++++ NVM_NUM_GROUPS=.
+[2023-07-26T06:23:21.139Z] ++++ nvm_echo 1
+[2023-07-26T06:23:21.139Z] ++++ command printf '%s\n' 1
+[2023-07-26T06:23:21.139Z] +++ NUM_VERSION_GROUPS=1
+[2023-07-26T06:23:21.139Z] +++ '[' 1 = 2 ']'
+[2023-07-26T06:23:21.139Z] +++ '[' 1 = 1 ']'
+[2023-07-26T06:23:21.139Z] +++ PATTERN=v14.
+[2023-07-26T06:23:21.139Z] +++ nvm_is_zsh
+[2023-07-26T06:23:21.139Z] +++ '[' -n '' ']'
+[2023-07-26T06:23:21.139Z] +++ nvm_is_zsh
+[2023-07-26T06:23:21.139Z] +++ '[' -n '' ']'
+[2023-07-26T06:23:21.139Z] +++ local NVM_DIRS_TO_SEARCH1
+[2023-07-26T06:23:21.139Z] +++ NVM_DIRS_TO_SEARCH1=
+[2023-07-26T06:23:21.139Z] +++ local NVM_DIRS_TO_SEARCH2
+[2023-07-26T06:23:21.139Z] +++ NVM_DIRS_TO_SEARCH2=
+[2023-07-26T06:23:21.139Z] +++ local NVM_DIRS_TO_SEARCH3
+[2023-07-26T06:23:21.139Z] +++ NVM_DIRS_TO_SEARCH3=
+[2023-07-26T06:23:21.139Z] +++ local NVM_ADD_SYSTEM
+[2023-07-26T06:23:21.139Z] +++ NVM_ADD_SYSTEM=false
+[2023-07-26T06:23:21.139Z] +++ nvm_is_iojs_version v14.
+[2023-07-26T06:23:21.139Z] +++ case "${1-}" in
+[2023-07-26T06:23:21.139Z] +++ return 1
+[2023-07-26T06:23:21.140Z] +++ '[' v14. = node- ']'
+[2023-07-26T06:23:21.140Z] +++ NVM_DIRS_TO_SEARCH1=/home/jenkins/.nvm
+[2023-07-26T06:23:21.140Z] +++ NVM_DIRS_TO_SEARCH2=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.140Z] +++ NVM_DIRS_TO_SEARCH3=/home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.140Z] +++ nvm_has_system_iojs
+[2023-07-26T06:23:21.140Z] ++++ nvm deactivate
+[2023-07-26T06:23:21.140Z] ++++ command -v iojs
+[2023-07-26T06:23:21.140Z] +++ '[' '' '!=' '' ']'
+[2023-07-26T06:23:21.140Z] +++ nvm_has_system_node
+[2023-07-26T06:23:21.140Z] ++++ nvm deactivate
+[2023-07-26T06:23:21.140Z] ++++ command -v node
+[2023-07-26T06:23:21.140Z] +++ '[' '' '!=' '' ']'
+[2023-07-26T06:23:21.140Z] +++ '[' -d /home/jenkins/.nvm ']'
+[2023-07-26T06:23:21.140Z] +++ command ls -1qA /home/jenkins/.nvm
+[2023-07-26T06:23:21.140Z] +++ ls -1qA /home/jenkins/.nvm
+[2023-07-26T06:23:21.140Z] +++ nvm_grep -q .
+[2023-07-26T06:23:21.140Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:21.140Z] +++ command grep -q .
+[2023-07-26T06:23:21.140Z] +++ grep -q .
+[2023-07-26T06:23:21.140Z] +++ '[' -d /home/jenkins/.nvm/versions/node ']'
+[2023-07-26T06:23:21.140Z] +++ command ls -1qA /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.140Z] +++ ls -1qA /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.140Z] +++ nvm_grep -q .
+[2023-07-26T06:23:21.140Z] +++ GREP_OPTIONS=
+[2023-07-26T06:23:21.140Z] +++ command grep -q .
+[2023-07-26T06:23:21.140Z] +++ grep -q .
+[2023-07-26T06:23:21.140Z] +++ '[' -d /home/jenkins/.nvm/versions/io.js ']'
+[2023-07-26T06:23:21.140Z] +++ NVM_DIRS_TO_SEARCH3=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.140Z] +++ local SEARCH_PATTERN
+[2023-07-26T06:23:21.140Z] +++ '[' -z v14. ']'
+[2023-07-26T06:23:21.140Z] ++++ nvm_echo v14.
+[2023-07-26T06:23:21.140Z] ++++ command printf '%s\n' v14.
+[2023-07-26T06:23:21.140Z] ++++ command sed 's#\.#\\\.#g;'
+[2023-07-26T06:23:21.140Z] ++++ sed 's#\.#\\\.#g;'
+[2023-07-26T06:23:21.140Z] +++ SEARCH_PATTERN='v14\.'
+[2023-07-26T06:23:21.140Z] +++ '[' -n /home/jenkins/.nvm/home/jenkins/.nvm/versions/node/home/jenkins/.nvm/versions/node ']'
+[2023-07-26T06:23:21.140Z] ++++ command find /home/jenkins/.nvm/alias /home/jenkins/.nvm/bash_completion /home/jenkins/.nvm/CODE_OF_CONDUCT.md /home/jenkins/.nvm/CONTRIBUTING.md /home/jenkins/.nvm/Dockerfile /home/jenkins/.nvm/GOVERNANCE.md /home/jenkins/.nvm/install.sh /home/jenkins/.nvm/LICENSE.md /home/jenkins/.nvm/Makefile /home/jenkins/.nvm/nvm-exec /home/jenkins/.nvm/nvm.sh /home/jenkins/.nvm/package.json /home/jenkins/.nvm/PROJECT_CHARTER.md /home/jenkins/.nvm/README.md /home/jenkins/.nvm/rename_test.sh /home/jenkins/.nvm/ROADMAP.md /home/jenkins/.nvm/test /home/jenkins/.nvm/update_test_mocks.sh /home/jenkins/.nvm/versions /home/jenkins/.nvm/versions/node/v14.21.2 /home/jenkins/.nvm/versions/node/v15.14.0 /home/jenkins/.nvm/versions/node/v16.19.0 /home/jenkins/.nvm/versions/node/v16.19.1 /home/jenkins/.nvm/versions/node/v16.20.0 /home/jenkins/.nvm/versions/node/v14.21.2 /home/jenkins/.nvm/versions/node/v15.14.0 /home/jenkins/.nvm/versions/node/v16.19.0 /home/jenkins/.nvm/versions/node/v16.19.1 /home/jenkins/.nvm/versions/node/v16.20.0 -name . -o -type d -prune -o -path 'v14.*'
+[2023-07-26T06:23:21.140Z] ++++ command sed -e '
+[2023-07-26T06:23:21.140Z]             s#/home/jenkins/.nvm/versions/io.js/#versions/iojs/#;
+[2023-07-26T06:23:21.140Z]             s#^/home/jenkins/.nvm/##;
+[2023-07-26T06:23:21.140Z]             \#^[^v]# d;
+[2023-07-26T06:23:21.140Z]             \#^versions$# d;
+[2023-07-26T06:23:21.140Z]             s#^versions/##;
+[2023-07-26T06:23:21.140Z]             s#^v#node/v#;
+[2023-07-26T06:23:21.140Z]             \#v14\.# !d;
+[2023-07-26T06:23:21.140Z]           ' -e 's#^\([^/]\{1,\}\)/\(.*\)$#\2.\1#;'
+[2023-07-26T06:23:21.140Z] ++++ command sort -t. -u -k 1.2,1n -k 2,2n -k 3,3n
+[2023-07-26T06:23:21.140Z] ++++ command sed -e 's#\(.*\)\.\([^\.]\{1,\}\)$#\2-\1#;' -e 's#^node-##;'
+[2023-07-26T06:23:21.140Z] ++++ sed -e 's#\(.*\)\.\([^\.]\{1,\}\)$#\2-\1#;' -e 's#^node-##;'
+[2023-07-26T06:23:21.140Z] ++++ sed -e '
+[2023-07-26T06:23:21.140Z]             s#/home/jenkins/.nvm/versions/io.js/#versions/iojs/#;
+[2023-07-26T06:23:21.140Z]             s#^/home/jenkins/.nvm/##;
+[2023-07-26T06:23:21.140Z]             \#^[^v]# d;
+[2023-07-26T06:23:21.140Z]             \#^versions$# d;
+[2023-07-26T06:23:21.140Z]             s#^versions/##;
+[2023-07-26T06:23:21.140Z]             s#^v#node/v#;
+[2023-07-26T06:23:21.140Z]             \#v14\.# !d;
+[2023-07-26T06:23:21.140Z]           ' -e 's#^\([^/]\{1,\}\)/\(.*\)$#\2.\1#;'
+[2023-07-26T06:23:21.140Z] ++++ sort -t. -u -k 1.2,1n -k 2,2n -k 3,3n
+[2023-07-26T06:23:21.140Z] ++++ find /home/jenkins/.nvm/alias /home/jenkins/.nvm/bash_completion /home/jenkins/.nvm/CODE_OF_CONDUCT.md /home/jenkins/.nvm/CONTRIBUTING.md /home/jenkins/.nvm/Dockerfile /home/jenkins/.nvm/GOVERNANCE.md /home/jenkins/.nvm/install.sh /home/jenkins/.nvm/LICENSE.md /home/jenkins/.nvm/Makefile /home/jenkins/.nvm/nvm-exec /home/jenkins/.nvm/nvm.sh /home/jenkins/.nvm/package.json /home/jenkins/.nvm/PROJECT_CHARTER.md /home/jenkins/.nvm/README.md /home/jenkins/.nvm/rename_test.sh /home/jenkins/.nvm/ROADMAP.md /home/jenkins/.nvm/test /home/jenkins/.nvm/update_test_mocks.sh /home/jenkins/.nvm/versions /home/jenkins/.nvm/versions/node/v14.21.2 /home/jenkins/.nvm/versions/node/v15.14.0 /home/jenkins/.nvm/versions/node/v16.19.0 /home/jenkins/.nvm/versions/node/v16.19.1 /home/jenkins/.nvm/versions/node/v16.20.0 /home/jenkins/.nvm/versions/node/v14.21.2 /home/jenkins/.nvm/versions/node/v15.14.0 /home/jenkins/.nvm/versions/node/v16.19.0 /home/jenkins/.nvm/versions/node/v16.19.1 /home/jenkins/.nvm/versions/node/v16.20.0 -name . -o -type d -prune -o -path 'v14.*'
+[2023-07-26T06:23:21.403Z] +++ VERSIONS=v14.21.2
+[2023-07-26T06:23:21.403Z] +++ '[' false = true ']'
+[2023-07-26T06:23:21.403Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] +++ nvm_echo v14.21.2
+[2023-07-26T06:23:21.403Z] +++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:21.403Z] ++ VERSION=v14.21.2
+[2023-07-26T06:23:21.403Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] ++ '[' _v14.21.2 = _N/A ']'
+[2023-07-26T06:23:21.403Z] ++ nvm_echo v14.21.2
+[2023-07-26T06:23:21.403Z] ++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:21.403Z] + VERSION=v14.21.2
+[2023-07-26T06:23:21.403Z] + '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] + '[' _v14.21.2 = _system ']'
+[2023-07-26T06:23:21.403Z] + '[' _v14.21.2 = _∞ ']'
+[2023-07-26T06:23:21.403Z] + '[' v14.21.2 = N/A ']'
+[2023-07-26T06:23:21.403Z] + nvm_ensure_version_installed v14.21.2 0
+[2023-07-26T06:23:21.403Z] + local PROVIDED_VERSION
+[2023-07-26T06:23:21.403Z] + PROVIDED_VERSION=v14.21.2
+[2023-07-26T06:23:21.403Z] + local IS_VERSION_FROM_NVMRC
+[2023-07-26T06:23:21.403Z] + IS_VERSION_FROM_NVMRC=0
+[2023-07-26T06:23:21.403Z] + '[' v14.21.2 = system ']'
+[2023-07-26T06:23:21.403Z] + local LOCAL_VERSION
+[2023-07-26T06:23:21.403Z] + local EXIT_CODE
+[2023-07-26T06:23:21.403Z] ++ nvm_version v14.21.2
+[2023-07-26T06:23:21.403Z] ++ local PATTERN
+[2023-07-26T06:23:21.403Z] ++ PATTERN=v14.21.2
+[2023-07-26T06:23:21.403Z] ++ local VERSION
+[2023-07-26T06:23:21.403Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] ++ '[' v14.21.2 = current ']'
+[2023-07-26T06:23:21.403Z] ++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:21.403Z] +++ nvm_node_prefix
+[2023-07-26T06:23:21.403Z] +++ nvm_echo node
+[2023-07-26T06:23:21.403Z] +++ command printf '%s\n' node
+[2023-07-26T06:23:21.403Z] ++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:21.403Z] ++ case "_${PATTERN}" in
+[2023-07-26T06:23:21.403Z] +++ nvm_ls v14.21.2
+[2023-07-26T06:23:21.403Z] +++ command tail -1
+[2023-07-26T06:23:21.403Z] +++ tail -1
+[2023-07-26T06:23:21.403Z] +++ local PATTERN
+[2023-07-26T06:23:21.403Z] +++ PATTERN=v14.21.2
+[2023-07-26T06:23:21.403Z] +++ local VERSIONS
+[2023-07-26T06:23:21.403Z] +++ VERSIONS=
+[2023-07-26T06:23:21.403Z] +++ '[' v14.21.2 = current ']'
+[2023-07-26T06:23:21.403Z] +++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:21.403Z] ++++ nvm_iojs_prefix
+[2023-07-26T06:23:21.403Z] ++++ nvm_echo iojs
+[2023-07-26T06:23:21.403Z] ++++ command printf '%s\n' iojs
+[2023-07-26T06:23:21.403Z] +++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:21.403Z] +++ local NVM_NODE_PREFIX
+[2023-07-26T06:23:21.403Z] ++++ nvm_node_prefix
+[2023-07-26T06:23:21.403Z] ++++ nvm_echo node
+[2023-07-26T06:23:21.403Z] ++++ command printf '%s\n' node
+[2023-07-26T06:23:21.403Z] +++ NVM_NODE_PREFIX=node
+[2023-07-26T06:23:21.403Z] +++ local NVM_VERSION_DIR_IOJS
+[2023-07-26T06:23:21.403Z] ++++ nvm_version_dir iojs
+[2023-07-26T06:23:21.403Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.403Z] ++++ NVM_WHICH_DIR=iojs
+[2023-07-26T06:23:21.403Z] ++++ '[' -z iojs ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' iojs = new ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' _iojs = _iojs ']'
+[2023-07-26T06:23:21.403Z] ++++ nvm_echo /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.403Z] ++++ command printf '%s\n' /home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.403Z] +++ NVM_VERSION_DIR_IOJS=/home/jenkins/.nvm/versions/io.js
+[2023-07-26T06:23:21.403Z] +++ local NVM_VERSION_DIR_NEW
+[2023-07-26T06:23:21.403Z] ++++ nvm_version_dir new
+[2023-07-26T06:23:21.403Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.403Z] ++++ NVM_WHICH_DIR=new
+[2023-07-26T06:23:21.403Z] ++++ '[' -z new ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' new = new ']'
+[2023-07-26T06:23:21.403Z] ++++ nvm_echo /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.403Z] ++++ command printf '%s\n' /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.403Z] +++ NVM_VERSION_DIR_NEW=/home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.403Z] +++ local NVM_VERSION_DIR_OLD
+[2023-07-26T06:23:21.403Z] ++++ nvm_version_dir old
+[2023-07-26T06:23:21.403Z] ++++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.403Z] ++++ NVM_WHICH_DIR=old
+[2023-07-26T06:23:21.403Z] ++++ '[' -z old ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' old = new ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' _old = _iojs ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' _old = _old ']'
+[2023-07-26T06:23:21.403Z] ++++ nvm_echo /home/jenkins/.nvm
+[2023-07-26T06:23:21.403Z] ++++ command printf '%s\n' /home/jenkins/.nvm
+[2023-07-26T06:23:21.403Z] +++ NVM_VERSION_DIR_OLD=/home/jenkins/.nvm
+[2023-07-26T06:23:21.403Z] +++ case "${PATTERN}" in
+[2023-07-26T06:23:21.403Z] +++ nvm_resolve_local_alias v14.21.2
+[2023-07-26T06:23:21.403Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] +++ local VERSION
+[2023-07-26T06:23:21.403Z] +++ local EXIT_CODE
+[2023-07-26T06:23:21.403Z] ++++ nvm_resolve_alias v14.21.2
+[2023-07-26T06:23:21.403Z] ++++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] ++++ local PATTERN
+[2023-07-26T06:23:21.403Z] ++++ PATTERN=v14.21.2
+[2023-07-26T06:23:21.403Z] ++++ local ALIAS
+[2023-07-26T06:23:21.403Z] ++++ ALIAS=v14.21.2
+[2023-07-26T06:23:21.403Z] ++++ local ALIAS_TEMP
+[2023-07-26T06:23:21.403Z] ++++ local SEEN_ALIASES
+[2023-07-26T06:23:21.403Z] ++++ SEEN_ALIASES=v14.21.2
+[2023-07-26T06:23:21.403Z] ++++ true
+[2023-07-26T06:23:21.403Z] +++++ nvm_alias v14.21.2
+[2023-07-26T06:23:21.403Z] +++++ nvm_echo
+[2023-07-26T06:23:21.403Z] +++++ command printf '%s\n' ''
+[2023-07-26T06:23:21.403Z] ++++ ALIAS_TEMP=
+[2023-07-26T06:23:21.403Z] ++++ '[' -z '' ']'
+[2023-07-26T06:23:21.403Z] ++++ break
+[2023-07-26T06:23:21.403Z] ++++ '[' -n v14.21.2 ']'
+[2023-07-26T06:23:21.403Z] ++++ '[' _v14.21.2 '!=' _v14.21.2 ']'
+[2023-07-26T06:23:21.404Z] ++++ nvm_validate_implicit_alias v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ return 2
+[2023-07-26T06:23:21.404Z] +++ VERSION=
+[2023-07-26T06:23:21.404Z] +++ EXIT_CODE=2
+[2023-07-26T06:23:21.404Z] +++ '[' -z '' ']'
+[2023-07-26T06:23:21.404Z] +++ return 2
+[2023-07-26T06:23:21.404Z] ++++ nvm_ensure_version_prefix v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ local NVM_VERSION
+[2023-07-26T06:23:21.404Z] +++++ nvm_strip_iojs_prefix v14.21.2
+[2023-07-26T06:23:21.404Z] +++++ local NVM_IOJS_PREFIX
+[2023-07-26T06:23:21.404Z] +++++ command sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:21.404Z] +++++ sed -e 's/^\([0-9]\)/v\1/g'
+[2023-07-26T06:23:21.404Z] ++++++ nvm_iojs_prefix
+[2023-07-26T06:23:21.404Z] ++++++ nvm_echo iojs
+[2023-07-26T06:23:21.404Z] ++++++ command printf '%s\n' iojs
+[2023-07-26T06:23:21.404Z] +++++ NVM_IOJS_PREFIX=iojs
+[2023-07-26T06:23:21.404Z] +++++ '[' v14.21.2 = iojs ']'
+[2023-07-26T06:23:21.404Z] +++++ nvm_echo v14.21.2
+[2023-07-26T06:23:21.404Z] +++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ NVM_VERSION=v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ nvm_is_iojs_version v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ case "${1-}" in
+[2023-07-26T06:23:21.404Z] ++++ return 1
+[2023-07-26T06:23:21.404Z] ++++ nvm_echo v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:21.404Z] +++ PATTERN=v14.21.2
+[2023-07-26T06:23:21.404Z] +++ '[' v14.21.2 = N/A ']'
+[2023-07-26T06:23:21.404Z] +++ local NVM_PATTERN_STARTS_WITH_V
+[2023-07-26T06:23:21.404Z] +++ case $PATTERN in
+[2023-07-26T06:23:21.404Z] +++ NVM_PATTERN_STARTS_WITH_V=true
+[2023-07-26T06:23:21.404Z] +++ '[' true = true ']'
+[2023-07-26T06:23:21.404Z] ++++ nvm_num_version_groups v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ local VERSION
+[2023-07-26T06:23:21.404Z] ++++ VERSION=v14.21.2
+[2023-07-26T06:23:21.404Z] ++++ VERSION=14.21.2
+[2023-07-26T06:23:21.404Z] ++++ VERSION=14.21.2
+[2023-07-26T06:23:21.404Z] ++++ '[' -z 14.21.2 ']'
+[2023-07-26T06:23:21.404Z] ++++ local NVM_NUM_DOTS
+[2023-07-26T06:23:21.404Z] +++++ nvm_echo 14.21.2
+[2023-07-26T06:23:21.404Z] +++++ command printf '%s\n' 14.21.2
+[2023-07-26T06:23:21.404Z] +++++ command sed -e 's/[^\.]//g'
+[2023-07-26T06:23:21.404Z] +++++ sed -e 's/[^\.]//g'
+[2023-07-26T06:23:21.404Z] ++++ NVM_NUM_DOTS=..
+[2023-07-26T06:23:21.404Z] ++++ local NVM_NUM_GROUPS
+[2023-07-26T06:23:21.404Z] ++++ NVM_NUM_GROUPS=...
+[2023-07-26T06:23:21.404Z] ++++ nvm_echo 3
+[2023-07-26T06:23:21.404Z] ++++ command printf '%s\n' 3
+[2023-07-26T06:23:21.404Z] +++ '[' _3 = _3 ']'
+[2023-07-26T06:23:21.404Z] +++ nvm_is_version_installed v14.21.2
+[2023-07-26T06:23:21.404Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.404Z] +++ local NVM_NODE_BINARY
+[2023-07-26T06:23:21.404Z] +++ NVM_NODE_BINARY=node
+[2023-07-26T06:23:21.404Z] ++++ nvm_get_os
+[2023-07-26T06:23:21.404Z] ++++ local NVM_UNAME
+[2023-07-26T06:23:21.404Z] +++++ command uname -a
+[2023-07-26T06:23:21.404Z] +++++ uname -a
+[2023-07-26T06:23:21.404Z] ++++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:21.404Z] ++++ local NVM_OS
+[2023-07-26T06:23:21.404Z] ++++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:21.404Z] ++++ NVM_OS=linux
+[2023-07-26T06:23:21.404Z] ++++ nvm_echo linux
+[2023-07-26T06:23:21.404Z] ++++ command printf '%s\n' linux
+[2023-07-26T06:23:21.404Z] +++ '[' _linux = _win ']'
+[2023-07-26T06:23:21.404Z] ++++ nvm_version_path v14.21.2
+[2023-07-26T06:23:21.404Z] +++ '[' -x /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:21.404Z] +++ return 0
+[2023-07-26T06:23:21.404Z] +++ VERSIONS=v14.21.2
+[2023-07-26T06:23:21.404Z] +++ '[' '' = true ']'
+[2023-07-26T06:23:21.404Z] +++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.404Z] +++ nvm_echo v14.21.2
+[2023-07-26T06:23:21.404Z] +++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:21.404Z] ++ VERSION=v14.21.2
+[2023-07-26T06:23:21.404Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.404Z] ++ '[' _v14.21.2 = _N/A ']'
+[2023-07-26T06:23:21.404Z] ++ nvm_echo v14.21.2
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' v14.21.2
+[2023-07-26T06:23:21.404Z] + LOCAL_VERSION=v14.21.2
+[2023-07-26T06:23:21.404Z] + EXIT_CODE=0
+[2023-07-26T06:23:21.404Z] + local NVM_VERSION_DIR
+[2023-07-26T06:23:21.404Z] + '[' 0 '!=' 0 ']'
+[2023-07-26T06:23:21.404Z] + nvm_is_version_installed v14.21.2
+[2023-07-26T06:23:21.404Z] + '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.404Z] + local NVM_NODE_BINARY
+[2023-07-26T06:23:21.404Z] + NVM_NODE_BINARY=node
+[2023-07-26T06:23:21.404Z] ++ nvm_get_os
+[2023-07-26T06:23:21.404Z] ++ local NVM_UNAME
+[2023-07-26T06:23:21.404Z] +++ command uname -a
+[2023-07-26T06:23:21.404Z] +++ uname -a
+[2023-07-26T06:23:21.404Z] ++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:21.404Z] ++ local NVM_OS
+[2023-07-26T06:23:21.404Z] ++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:21.404Z] ++ NVM_OS=linux
+[2023-07-26T06:23:21.404Z] ++ nvm_echo linux
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' linux
+[2023-07-26T06:23:21.404Z] + '[' _linux = _win ']'
+[2023-07-26T06:23:21.404Z] ++ nvm_version_path v14.21.2
+[2023-07-26T06:23:21.404Z] + '[' -x /home/jenkins/.nvm/versions/node/v14.21.2/bin/node ']'
+[2023-07-26T06:23:21.404Z] + return 0
+[2023-07-26T06:23:21.404Z] + local NVM_VERSION_DIR
+[2023-07-26T06:23:21.404Z] ++ nvm_version_path v14.21.2
+[2023-07-26T06:23:21.404Z] ++ local VERSION
+[2023-07-26T06:23:21.404Z] ++ VERSION=v14.21.2
+[2023-07-26T06:23:21.404Z] ++ '[' -z v14.21.2 ']'
+[2023-07-26T06:23:21.404Z] ++ nvm_is_iojs_version v14.21.2
+[2023-07-26T06:23:21.404Z] ++ case "${1-}" in
+[2023-07-26T06:23:21.404Z] ++ return 1
+[2023-07-26T06:23:21.404Z] ++ nvm_version_greater 0.12.0 v14.21.2
+[2023-07-26T06:23:21.404Z] ++ command awk 'BEGIN {
+[2023-07-26T06:23:21.404Z]     if (ARGV[1] == "" || ARGV[2] == "") exit(1)
+[2023-07-26T06:23:21.404Z]     split(ARGV[1], a, /\./);
+[2023-07-26T06:23:21.404Z]     split(ARGV[2], b, /\./);
+[2023-07-26T06:23:21.404Z]     for (i=1; i<=3; i++) {
+[2023-07-26T06:23:21.404Z]       if (a[i] && a[i] !~ /^[0-9]+$/) exit(2);
+[2023-07-26T06:23:21.404Z]       if (b[i] && b[i] !~ /^[0-9]+$/) { exit(0); }
+[2023-07-26T06:23:21.404Z]       if (a[i] < b[i]) exit(3);
+[2023-07-26T06:23:21.404Z]       else if (a[i] > b[i]) exit(0);
+[2023-07-26T06:23:21.404Z]     }
+[2023-07-26T06:23:21.404Z]     exit(4)
+[2023-07-26T06:23:21.404Z]   }' 0.12.0 14.21.2
+[2023-07-26T06:23:21.404Z] ++ awk 'BEGIN {
+[2023-07-26T06:23:21.404Z]     if (ARGV[1] == "" || ARGV[2] == "") exit(1)
+[2023-07-26T06:23:21.404Z]     split(ARGV[1], a, /\./);
+[2023-07-26T06:23:21.404Z]     split(ARGV[2], b, /\./);
+[2023-07-26T06:23:21.404Z]     for (i=1; i<=3; i++) {
+[2023-07-26T06:23:21.404Z]       if (a[i] && a[i] !~ /^[0-9]+$/) exit(2);
+[2023-07-26T06:23:21.404Z]       if (b[i] && b[i] !~ /^[0-9]+$/) { exit(0); }
+[2023-07-26T06:23:21.404Z]       if (a[i] < b[i]) exit(3);
+[2023-07-26T06:23:21.404Z]       else if (a[i] > b[i]) exit(0);
+[2023-07-26T06:23:21.404Z]     }
+[2023-07-26T06:23:21.404Z]     exit(4)
+[2023-07-26T06:23:21.404Z]   }' 0.12.0 14.21.2
+[2023-07-26T06:23:21.404Z] +++ nvm_version_dir new
+[2023-07-26T06:23:21.404Z] +++ local NVM_WHICH_DIR
+[2023-07-26T06:23:21.404Z] +++ NVM_WHICH_DIR=new
+[2023-07-26T06:23:21.404Z] +++ '[' -z new ']'
+[2023-07-26T06:23:21.404Z] +++ '[' new = new ']'
+[2023-07-26T06:23:21.404Z] +++ nvm_echo /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.404Z] +++ command printf '%s\n' /home/jenkins/.nvm/versions/node
+[2023-07-26T06:23:21.404Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.404Z] + NVM_VERSION_DIR=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.404Z] ++ nvm_change_path /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin /bin /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.404Z] ++ '[' -z /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin ']'
+[2023-07-26T06:23:21.404Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ nvm_grep -q '/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.404Z] ++ command grep -q '/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ grep -q '/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ nvm_grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.404Z] ++ command grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.404Z] ++ command grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.404Z] ++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.404Z] ++ command grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ grep -Eq '(^|:)(/usr(/local)?)?/bin:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin'
+[2023-07-26T06:23:21.404Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.405Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.405Z] ++ command sed -e 's#/home/jenkins/.nvm/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#'
+[2023-07-26T06:23:21.405Z] ++ sed -e 's#/home/jenkins/.nvm/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/bin[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/bin#'
+[2023-07-26T06:23:21.405Z] + PATH=/home/jenkins/.nvm/versions/node/v14.21.2/bin:/opt/apache-maven-3.8.6/bin:/opt/gradle//bin:/usr/local/bin:/usr/bin
+[2023-07-26T06:23:21.405Z] + nvm_has manpath
+[2023-07-26T06:23:21.405Z] + type manpath
+[2023-07-26T06:23:21.405Z] + '[' -z '' ']'
+[2023-07-26T06:23:21.405Z] + local MANPATH
+[2023-07-26T06:23:21.405Z] ++ manpath
+[2023-07-26T06:23:21.405Z] + MANPATH=/home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ nvm_change_path /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man /share/man /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:21.405Z] ++ '[' -z /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man ']'
+[2023-07-26T06:23:21.405Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ nvm_grep -q '/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.405Z] ++ command grep -q '/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ grep -q '/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ nvm_grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.405Z] ++ command grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ grep -q '/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.405Z] ++ command grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ nvm_grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ GREP_OPTIONS=
+[2023-07-26T06:23:21.405Z] ++ command grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ grep -Eq '(^|:)(/usr(/local)?)?/share/man:.*/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man'
+[2023-07-26T06:23:21.405Z] ++ nvm_echo /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ command printf '%s\n' /home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] ++ command sed -e 's#/home/jenkins/.nvm/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#'
+[2023-07-26T06:23:21.405Z] ++ sed -e 's#/home/jenkins/.nvm/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#' -e 's#/home/jenkins/.nvm/versions/[^/]*/[^/]*/share/man[^:]*#/home/jenkins/.nvm/versions/node/v14.21.2/share/man#'
+[2023-07-26T06:23:21.405Z] + MANPATH=/home/jenkins/.nvm/versions/node/v14.21.2/share/man:/usr/local/share/man:/usr/share/man
+[2023-07-26T06:23:21.405Z] + export MANPATH
+[2023-07-26T06:23:21.405Z] + export PATH
+[2023-07-26T06:23:21.405Z] + hash -r
+[2023-07-26T06:23:21.405Z] + export NVM_BIN=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:21.405Z] + NVM_BIN=/home/jenkins/.nvm/versions/node/v14.21.2/bin
+[2023-07-26T06:23:21.405Z] + export NVM_INC=/home/jenkins/.nvm/versions/node/v14.21.2/include/node
+[2023-07-26T06:23:21.405Z] + NVM_INC=/home/jenkins/.nvm/versions/node/v14.21.2/include/node
+[2023-07-26T06:23:21.405Z] + '[' '' = true ']'
+[2023-07-26T06:23:21.405Z] + local NVM_USE_OUTPUT
+[2023-07-26T06:23:21.405Z] + NVM_USE_OUTPUT=
+[2023-07-26T06:23:21.405Z] + '[' 0 -ne 1 ']'
+[2023-07-26T06:23:21.405Z] + nvm_is_iojs_version v14.21.2
+[2023-07-26T06:23:21.405Z] + case "${1-}" in
+[2023-07-26T06:23:21.405Z] + return 1
+[2023-07-26T06:23:21.405Z] ++ nvm_print_npm_version
+[2023-07-26T06:23:21.405Z] ++ nvm_has npm
+[2023-07-26T06:23:21.405Z] ++ type npm
+[2023-07-26T06:23:21.405Z] +++ npm --version
+[2023-07-26T06:23:27.974Z] ++ command printf ' (npm v9.8.0)'
+[2023-07-26T06:23:27.974Z] ++ printf ' (npm v9.8.0)'
+[2023-07-26T06:23:27.974Z] + NVM_USE_OUTPUT='Now using node v14.21.2 (npm v9.8.0)'
+[2023-07-26T06:23:27.974Z] + '[' _v14.21.2 '!=' _system ']'
+[2023-07-26T06:23:27.974Z] + local NVM_USE_CMD
+[2023-07-26T06:23:27.974Z] + NVM_USE_CMD='nvm use --delete-prefix'
+[2023-07-26T06:23:27.974Z] + '[' -n 14 ']'
+[2023-07-26T06:23:27.974Z] + NVM_USE_CMD='nvm use --delete-prefix v14.21.2'
+[2023-07-26T06:23:27.974Z] + '[' 0 -eq 1 ']'
+[2023-07-26T06:23:27.974Z] + nvm_die_on_prefix 0 'nvm use --delete-prefix v14.21.2' /home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:27.974Z] + local NVM_DELETE_PREFIX
+[2023-07-26T06:23:27.974Z] + NVM_DELETE_PREFIX=0
+[2023-07-26T06:23:27.975Z] + case "${NVM_DELETE_PREFIX}" in
+[2023-07-26T06:23:27.975Z] + local NVM_COMMAND
+[2023-07-26T06:23:27.975Z] + NVM_COMMAND='nvm use --delete-prefix v14.21.2'
+[2023-07-26T06:23:27.975Z] + local NVM_VERSION_DIR
+[2023-07-26T06:23:27.975Z] + NVM_VERSION_DIR=/home/jenkins/.nvm/versions/node/v14.21.2
+[2023-07-26T06:23:27.975Z] + '[' -z 'nvm use --delete-prefix v14.21.2' ']'
+[2023-07-26T06:23:27.975Z] + '[' -z /home/jenkins/.nvm/versions/node/v14.21.2 ']'
+[2023-07-26T06:23:27.975Z] + '[' -n '' ']'
+[2023-07-26T06:23:27.975Z] + local NVM_OS
+[2023-07-26T06:23:27.975Z] ++ nvm_get_os
+[2023-07-26T06:23:27.975Z] ++ local NVM_UNAME
+[2023-07-26T06:23:27.975Z] +++ command uname -a
+[2023-07-26T06:23:27.975Z] +++ uname -a
+[2023-07-26T06:23:27.975Z] ++ NVM_UNAME='Linux vm-okd-bldr-2 3.10.0-1160.81.1.el7.x86_64 #1 SMP Fri Dec 16 17:29:43 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux'
+[2023-07-26T06:23:27.975Z] ++ local NVM_OS
+[2023-07-26T06:23:27.975Z] ++ case "${NVM_UNAME}" in
+[2023-07-26T06:23:27.975Z] ++ NVM_OS=linux
+[2023-07-26T06:23:27.975Z] ++ nvm_echo linux
+[2023-07-26T06:23:27.975Z] ++ command printf '%s\n' linux
+[2023-07-26T06:23:27.975Z] + NVM_OS=linux
+[2023-07-26T06:23:27.975Z] + local NVM_NPM_CONFIG_x_PREFIX_ENV
+[2023-07-26T06:23:27.975Z] ++ command awk 'BEGIN { for (name in ENVIRON) if (toupper(name) == "NPM_CONFIG_PREFIX") { print name; break } }'
+[2023-07-26T06:23:27.975Z] ++ awk 'BEGIN { for (name in ENVIRON) if (toupper(name) == "NPM_CONFIG_PREFIX") { print name; break } }'
+[2023-07-26T06:23:27.975Z] + NVM_NPM_CONFIG_x_PREFIX_ENV=
+[2023-07-26T06:23:27.975Z] + '[' -n '' ']'
+[2023-07-26T06:23:27.975Z] + local NVM_NPM_BUILTIN_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPM_BUILTIN_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc
+[2023-07-26T06:23:27.975Z] + nvm_npmrc_bad_news_bears /home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc
+[2023-07-26T06:23:27.975Z] + local NVM_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc
+[2023-07-26T06:23:27.975Z] + '[' -n /home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc ']'
+[2023-07-26T06:23:27.975Z] + '[' -f /home/jenkins/.nvm/versions/node/v14.21.2/lib/node_modules/npm/npmrc ']'
+[2023-07-26T06:23:27.975Z] + nvm_grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:27.975Z] + GREP_OPTIONS=
+[2023-07-26T06:23:27.975Z] + command grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:27.975Z] + grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:27.975Z] + return 1
+[2023-07-26T06:23:27.975Z] + local NVM_NPM_GLOBAL_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPM_GLOBAL_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc
+[2023-07-26T06:23:27.975Z] + nvm_npmrc_bad_news_bears /home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc
+[2023-07-26T06:23:27.975Z] + local NVM_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPMRC=/home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc
+[2023-07-26T06:23:27.975Z] + '[' -n /home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc ']'
+[2023-07-26T06:23:27.975Z] + '[' -f /home/jenkins/.nvm/versions/node/v14.21.2/etc/npmrc ']'
+[2023-07-26T06:23:27.975Z] + return 1
+[2023-07-26T06:23:27.975Z] + local NVM_NPM_USER_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPM_USER_NPMRC=/home/jenkins/.npmrc
+[2023-07-26T06:23:27.975Z] + nvm_npmrc_bad_news_bears /home/jenkins/.npmrc
+[2023-07-26T06:23:27.975Z] + local NVM_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPMRC=/home/jenkins/.npmrc
+[2023-07-26T06:23:27.975Z] + '[' -n /home/jenkins/.npmrc ']'
+[2023-07-26T06:23:27.975Z] + '[' -f /home/jenkins/.npmrc ']'
+[2023-07-26T06:23:27.975Z] + nvm_grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:27.975Z] + GREP_OPTIONS=
+[2023-07-26T06:23:27.975Z] + command grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:27.975Z] + grep -Ee '^(prefix|globalconfig) *='
+[2023-07-26T06:23:27.975Z] + return 1
+[2023-07-26T06:23:27.975Z] + local NVM_NPM_PROJECT_NPMRC
+[2023-07-26T06:23:27.975Z] ++ nvm_find_project_dir
+[2023-07-26T06:23:27.975Z] ++ local path_
+[2023-07-26T06:23:27.975Z] ++ path_=/home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:27.975Z] ++ '[' /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex '!=' '' ']'
+[2023-07-26T06:23:27.975Z] ++ '[' '!' -f /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/package.json ']'
+[2023-07-26T06:23:27.975Z] ++ nvm_echo /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:27.975Z] ++ command printf '%s\n' /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex
+[2023-07-26T06:23:27.975Z] + NVM_NPM_PROJECT_NPMRC=/home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc
+[2023-07-26T06:23:27.975Z] + nvm_npmrc_bad_news_bears /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc
+[2023-07-26T06:23:27.975Z] + local NVM_NPMRC
+[2023-07-26T06:23:27.975Z] + NVM_NPMRC=/home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc
+[2023-07-26T06:23:27.975Z] + '[' -n /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc ']'
+[2023-07-26T06:23:27.975Z] + '[' -f /home/jenkins/jenkins-workspace/workspace/KSPK-INFINISOFT/integration-capex/.npmrc ']'
+[2023-07-26T06:23:27.975Z] + return 1
+[2023-07-26T06:23:27.975Z] + '[' -n 'Now using node v14.21.2 (npm v9.8.0)' ']'
+[2023-07-26T06:23:27.975Z] + '[' 0 -ne 1 ']'
+[2023-07-26T06:23:27.975Z] + nvm_echo 'Now using node v14.21.2 (npm v9.8.0)'
+[2023-07-26T06:23:27.975Z] + command printf '%s\n' 'Now using node v14.21.2 (npm v9.8.0)'
+[2023-07-26T06:23:27.975Z] Now using node v14.21.2 (npm v9.8.0)
+[2023-07-26T06:23:27.975Z] + EXIT_CODE=0
+[2023-07-26T06:23:27.975Z] + set -e
+[2023-07-26T06:23:27.975Z] + return 0
+[2023-07-26T06:23:27.975Z] + npm config set registry http://172.27.8.79:8081/repository/npm-group/
+[2023-07-26T06:23:27.975Z] + npm config set always-auth true
+[2023-07-26T06:23:28.545Z] npm ERR! `always-auth` is not a valid npm option
+[2023-07-26T06:23:28.545Z] 
+[2023-07-26T06:23:28.545Z] npm ERR! A complete log of this run can be found in: /home/jenkins/.npm/_logs/2023-07-26T06_23_10_371Z-debug-0.log
+[2023-07-26T06:23:28.587Z] [Pipeline] }
+[2023-07-26T06:23:28.665Z] [Pipeline] // withEnv
+[2023-07-26T06:23:28.701Z] [Pipeline] }
+[2023-07-26T06:23:28.786Z] [Pipeline] // withCredentials
+[2023-07-26T06:23:28.851Z] [Pipeline] }
+[2023-07-26T06:23:28.928Z] [Pipeline] // stage
+[2023-07-26T06:23:28.981Z] [Pipeline] stage
+[2023-07-26T06:23:28.989Z] [Pipeline] { (Scan via SonarQube)
+[2023-07-26T06:23:29.036Z] Stage "Scan via SonarQube" skipped due to earlier failure(s)
+[2023-07-26T06:23:29.055Z] [Pipeline] }
+[2023-07-26T06:23:29.117Z] [Pipeline] // stage
+[2023-07-26T06:23:29.172Z] [Pipeline] stage
+[2023-07-26T06:23:29.184Z] [Pipeline] { (Build Docker image)
+[2023-07-26T06:23:29.217Z] Stage "Build Docker image" skipped due to earlier failure(s)
+[2023-07-26T06:23:29.238Z] [Pipeline] }
+[2023-07-26T06:23:29.337Z] [Pipeline] // stage
+[2023-07-26T06:23:29.395Z] [Pipeline] stage
+[2023-07-26T06:23:29.409Z] [Pipeline] { (Check vulnerabilities)
+[2023-07-26T06:23:29.449Z] Stage "Check vulnerabilities" skipped due to earlier failure(s)
+[2023-07-26T06:23:29.479Z] [Pipeline] }
+[2023-07-26T06:23:29.568Z] [Pipeline] // stage
+[2023-07-26T06:23:29.651Z] [Pipeline] stage
+[2023-07-26T06:23:29.665Z] [Pipeline] { (Build and push helm)
+[2023-07-26T06:23:29.708Z] Stage "Build and push helm" skipped due to earlier failure(s)
+[2023-07-26T06:23:29.731Z] [Pipeline] }
+[2023-07-26T06:23:29.820Z] [Pipeline] // stage
+[2023-07-26T06:23:29.908Z] [Pipeline] stage
+[2023-07-26T06:23:29.924Z] [Pipeline] { (Declarative: Post Actions)
+[2023-07-26T06:23:30.026Z] [Pipeline] script
+[2023-07-26T06:23:30.043Z] [Pipeline] {
+[2023-07-26T06:23:30.155Z] [Pipeline] }
+[2023-07-26T06:23:30.213Z] [Pipeline] // script
+[2023-07-26T06:23:30.264Z] [Pipeline] withCredentials
+[2023-07-26T06:23:30.280Z] Masking supported pattern matches of $BOT
+[2023-07-26T06:23:30.316Z] [Pipeline] {
+[2023-07-26T06:23:30.382Z] [Pipeline] sh
+[2023-07-26T06:23:30.392Z] Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+[2023-07-26T06:23:30.396Z] 		 Affected argument(s) used the following variable(s): [BOT]
+[2023-07-26T06:23:30.396Z] 		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
+[2023-07-26T06:23:30.670Z] ++ cat package.json
+[2023-07-26T06:23:30.670Z] ++ head -n1
+[2023-07-26T06:23:30.670Z] ++ grep version
+[2023-07-26T06:23:30.670Z] ++ cut -d: -f2
+[2023-07-26T06:23:30.670Z] ++ tr -d ,
+[2023-07-26T06:23:30.670Z] + export 'VERSION= "1.0.0"'
+[2023-07-26T06:23:30.670Z] + VERSION=' "1.0.0"'
+[2023-07-26T06:23:30.670Z] + curl -X POST https://api.telegram.org/****/sendMessage -d chat_id=-791014650 -d parse_mode=markdown -d 'text=DEPLOY FAILURE  
+[2023-07-26T06:23:30.670Z] 
+[2023-07-26T06:23:30.670Z] [integration-capex #50](https://ci.apps.okd4.paas.ibs.ru/job/KSPK-INFINISOFT/job/integration-capex/50/) 
+[2023-07-26T06:23:30.670Z] *Started by user AKovalchuk*                         
+[2023-07-26T06:23:30.670Z] Start: 09:23:02 
+[2023-07-26T06:23:30.670Z] End:  09:23:30 
+[2023-07-26T06:23:30.670Z] 
+[2023-07-26T06:23:30.670Z] Changes:
+[2023-07-26T06:23:30.670Z]   - добавил sast_clean_ws: false
+[2023-07-26T06:23:30.670Z]  
+[2023-07-26T06:23:30.670Z] 
+[2023-07-26T06:23:30.670Z] Version:  "1.0.0"                         
+[2023-07-26T06:23:30.670Z] Branch: origin/release/GKS 
+[2023-07-26T06:23:30.670Z] Commit: 68f3233'
+[2023-07-26T06:23:30.670Z]   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-07-26T06:23:30.670Z]                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-07-26T06:23:30.928Z]   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  1189  100   796  100   393   2092   1032 --:--:-- --:--:-- --:--:--  2094
+[2023-07-26T06:23:30.937Z] {"ok":true,"result":{"message_id":837,"from":{"id":5629103800,"is_bot":true,"first_name":"kspk_ci","username":"kspk_ci_bot"},"chat":{"id":-791014650,"title":"COSMOS notifications","type":"group","all_members_are_administrators":true},"date":1690352610,"text":"DEPLOY FAILURE  \n\nintegration-capex #50 \nStarted by user AKovalchuk                         \nStart: 09:23:02 \nEnd:  09:23:30 \n\nChanges:\n  - \u0434\u043e\u0431\u0430\u0432\u0438\u043b sastcleanws: false\n \n\nVersion:  \"1.0.0\"                         \nBranch: origin/release/GKS \nCommit: 68f3233","entities":[{"offset":18,"length":21,"type":"text_link","url":"https://ci.apps.okd4.paas.ibs.ru/job/KSPK-INFINISOFT/job/integration-capex/50/"},{"offset":41,"length":26,"type":"bold"},{"offset":152,"length":5,"type":"italic"}]}}
+[2023-07-26T06:23:30.956Z] [Pipeline] }
+[2023-07-26T06:23:31.030Z] [Pipeline] // withCredentials
+[2023-07-26T06:23:31.062Z] [Pipeline] }
+[2023-07-26T06:23:31.123Z] [Pipeline] // stage
+[2023-07-26T06:23:31.148Z] [Pipeline] }
+[2023-07-26T06:23:31.218Z] [Pipeline] // withEnv
+[2023-07-26T06:23:31.271Z] [Pipeline] }
+[2023-07-26T06:23:31.349Z] [Pipeline] // withEnv
+[2023-07-26T06:23:31.387Z] [Pipeline] }
+[2023-07-26T06:23:31.503Z] [Pipeline] // node
+[2023-07-26T06:23:31.590Z] [Pipeline] End of Pipeline
+[2023-07-26T06:23:31.688Z] ERROR: script returned exit code 1
+[2023-07-26T06:23:31.733Z] Finished: FAILURE

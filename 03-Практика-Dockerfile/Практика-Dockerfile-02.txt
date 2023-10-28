@@ -1,0 +1,1 @@
+Напишите Dockerfile для dotnet приложения соблюдая Best Practicies

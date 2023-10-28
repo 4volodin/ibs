@@ -1,0 +1,476 @@
+[2023-07-26T09:35:55.502Z] Started by user SPavlov
+[2023-07-26T09:35:55.503Z] Checking out git https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git into /var/jenkins_home/workspace/RIM/rim-ui-webui-3@script/d81fe8c36dc9f4fcb72c5760155eb3f7f81642e7b9ccf9bf872c7a526bdafcea to read ci/rim-webui/jenkins/Jenkinsfile
+[2023-07-26T09:35:55.511Z] The recommended git tool is: NONE
+[2023-07-26T09:35:55.511Z] using credential rim-ci
+[2023-07-26T09:35:55.519Z]  > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/RIM/rim-ui-webui-3@script/d81fe8c36dc9f4fcb72c5760155eb3f7f81642e7b9ccf9bf872c7a526bdafcea/.git # timeout=10
+[2023-07-26T09:35:55.528Z] Fetching changes from the remote Git repository
+[2023-07-26T09:35:55.538Z]  > git config remote.origin.url https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git # timeout=10
+[2023-07-26T09:35:55.554Z] Fetching upstream changes from https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git
+[2023-07-26T09:35:55.554Z]  > git --version # timeout=10
+[2023-07-26T09:35:55.560Z]  > git --version # 'git version 2.30.2'
+[2023-07-26T09:35:55.560Z] using GIT_ASKPASS to set credentials сервисная УЗ bitbucket для проекта RIM
+[2023-07-26T09:35:55.573Z]  > git fetch --tags --force --progress -- https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2023-07-26T09:35:56.980Z]  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+[2023-07-26T09:35:56.992Z] Checking out Revision 0b5c265611816335c32adfb2618f8571fed08b1b (refs/remotes/origin/master)
+[2023-07-26T09:35:56.992Z]  > git config core.sparsecheckout # timeout=10
+[2023-07-26T09:35:56.998Z]  > git checkout -f 0b5c265611816335c32adfb2618f8571fed08b1b # timeout=10
+[2023-07-26T09:35:57.535Z] Commit message: "Pull request #213: RIM-4799: Удаление смет на этапе приемки"
+[2023-07-26T09:35:57.537Z]  > git rev-list --no-walk 0b5c265611816335c32adfb2618f8571fed08b1b # timeout=10
+[2023-07-26T09:36:00.444Z] [Pipeline] Start of Pipeline
+[2023-07-26T09:36:00.740Z] [Pipeline] withFolderProperties
+[2023-07-26T09:36:00.935Z] [Pipeline] {
+[2023-07-26T09:36:01.193Z] [Pipeline] }
+[2023-07-26T09:36:01.358Z] [Pipeline] // withFolderProperties
+[2023-07-26T09:36:01.563Z] [Pipeline] echo
+[2023-07-26T09:36:01.645Z] Catching the exception:groovy.lang.MissingPropertyException: No such property: BITBUCKET_TARGET_BRANCH for class: groovy.lang.Binding
+[2023-07-26T09:36:01.668Z] [Pipeline] echo
+[2023-07-26T09:36:01.742Z] dev stand
+[2023-07-26T09:36:02.881Z] [Pipeline] podTemplate
+[2023-07-26T09:36:02.902Z] [Pipeline] {
+[2023-07-26T09:36:02.984Z] [Pipeline] node
+[2023-07-26T09:36:08.388Z] Created Pod: OKD4-ibs-paas cicd/rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4
+[2023-07-26T09:36:17.991Z] Still waiting to schedule task
+[2023-07-26T09:36:17.993Z] ‘rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4’ is offline
+[2023-07-26T09:36:47.617Z] Agent rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4 is provisioned from template RIM_rim-ui-webui-3_250-7kv7k-vgl8x
+[2023-07-26T09:36:47.618Z] ---
+[2023-07-26T09:36:47.618Z] apiVersion: "v1"
+[2023-07-26T09:36:47.618Z] kind: "Pod"
+[2023-07-26T09:36:47.618Z] metadata:
+[2023-07-26T09:36:47.618Z]   annotations:
+[2023-07-26T09:36:47.618Z]     buildUrl: "http://jenkins-0.jenkins.cicd.svc:8080/job/RIM/job/rim-ui-webui-3/250/"
+[2023-07-26T09:36:47.618Z]     runUrl: "job/RIM/job/rim-ui-webui-3/250/"
+[2023-07-26T09:36:47.618Z]   labels:
+[2023-07-26T09:36:47.618Z]     jenkins: "slave"
+[2023-07-26T09:36:47.618Z]     jenkins/label-digest: "233282a9ece1ffdc0899f559579d7f07e6412c08"
+[2023-07-26T09:36:47.618Z]     jenkins/label: "RIM_rim-ui-webui-3_250-7kv7k"
+[2023-07-26T09:36:47.618Z]   name: "rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4"
+[2023-07-26T09:36:47.618Z]   namespace: "cicd"
+[2023-07-26T09:36:47.618Z] spec:
+[2023-07-26T09:36:47.618Z]   containers:
+[2023-07-26T09:36:47.618Z]   - image: "docker:20.10.16-dind"
+[2023-07-26T09:36:47.618Z]     name: "docker-daemon"
+[2023-07-26T09:36:47.618Z]     resources:
+[2023-07-26T09:36:47.618Z]       requests:
+[2023-07-26T09:36:47.618Z]         memory: "1.5Gi"
+[2023-07-26T09:36:47.618Z]         cpu: "1"
+[2023-07-26T09:36:47.618Z]     securityContext:
+[2023-07-26T09:36:47.618Z]       privileged: true
+[2023-07-26T09:36:47.618Z]     volumeMounts:
+[2023-07-26T09:36:47.618Z]     - mountPath: "/var/run"
+[2023-07-26T09:36:47.618Z]       name: "docker-socket"
+[2023-07-26T09:36:47.618Z]     - mountPath: "/etc/ssl/certs/gs-cert.pem"
+[2023-07-26T09:36:47.618Z]       name: "ca-pemstore"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]       subPath: "gs-cert.pem"
+[2023-07-26T09:36:47.618Z]     - mountPath: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]       name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]   - args:
+[2023-07-26T09:36:47.618Z]     - "12h"
+[2023-07-26T09:36:47.618Z]     command:
+[2023-07-26T09:36:47.618Z]     - "sleep"
+[2023-07-26T09:36:47.618Z]     image: "docker:20.10.16"
+[2023-07-26T09:36:47.618Z]     name: "docker"
+[2023-07-26T09:36:47.618Z]     volumeMounts:
+[2023-07-26T09:36:47.618Z]     - mountPath: "/var/run"
+[2023-07-26T09:36:47.618Z]       name: "docker-socket"
+[2023-07-26T09:36:47.618Z]     - mountPath: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]       name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]   - args:
+[2023-07-26T09:36:47.618Z]     - "12h"
+[2023-07-26T09:36:47.618Z]     command:
+[2023-07-26T09:36:47.618Z]     - "sleep"
+[2023-07-26T09:36:47.618Z]     image: "appuio/oc:v4.5"
+[2023-07-26T09:36:47.618Z]     name: "helm"
+[2023-07-26T09:36:47.618Z]     volumeMounts:
+[2023-07-26T09:36:47.618Z]     - mountPath: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]       name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]   - args:
+[2023-07-26T09:36:47.618Z]     - "12h"
+[2023-07-26T09:36:47.618Z]     command:
+[2023-07-26T09:36:47.618Z]     - "sleep"
+[2023-07-26T09:36:47.618Z]     image: "quay.io/coreos/clair:v4.3.6"
+[2023-07-26T09:36:47.618Z]     name: "clair"
+[2023-07-26T09:36:47.618Z]     securityContext:
+[2023-07-26T09:36:47.618Z]       privileged: true
+[2023-07-26T09:36:47.618Z]     volumeMounts:
+[2023-07-26T09:36:47.618Z]     - mountPath: "/.docker/"
+[2023-07-26T09:36:47.618Z]       name: "docker-config"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]     - mountPath: "/etc/ssl/certs/gs-cert.pem"
+[2023-07-26T09:36:47.618Z]       name: "ca-pemstore"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]       subPath: "gs-cert.pem"
+[2023-07-26T09:36:47.618Z]     - mountPath: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]       name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]   - args:
+[2023-07-26T09:36:47.618Z]     - "12h"
+[2023-07-26T09:36:47.618Z]     command:
+[2023-07-26T09:36:47.618Z]     - "sleep"
+[2023-07-26T09:36:47.618Z]     image: "registry.access.redhat.com/ubi8/nodejs-16"
+[2023-07-26T09:36:47.618Z]     name: "sonar-js"
+[2023-07-26T09:36:47.618Z]     securityContext:
+[2023-07-26T09:36:47.618Z]       privileged: true
+[2023-07-26T09:36:47.618Z]     volumeMounts:
+[2023-07-26T09:36:47.618Z]     - mountPath: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]       name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]   - env:
+[2023-07-26T09:36:47.618Z]     - name: "JENKINS_SECRET"
+[2023-07-26T09:36:47.618Z]       value: "********"
+[2023-07-26T09:36:47.618Z]     - name: "JENKINS_AGENT_NAME"
+[2023-07-26T09:36:47.618Z]       value: "rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4"
+[2023-07-26T09:36:47.618Z]     - name: "JENKINS_NAME"
+[2023-07-26T09:36:47.618Z]       value: "rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4"
+[2023-07-26T09:36:47.618Z]     - name: "JENKINS_AGENT_WORKDIR"
+[2023-07-26T09:36:47.618Z]       value: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]     - name: "JENKINS_URL"
+[2023-07-26T09:36:47.618Z]       value: "http://jenkins-0.jenkins.cicd.svc:8080/"
+[2023-07-26T09:36:47.618Z]     image: "jenkins/inbound-agent:3131.vf2b_b_798b_ce99-2"
+[2023-07-26T09:36:47.618Z]     name: "jnlp"
+[2023-07-26T09:36:47.618Z]     resources:
+[2023-07-26T09:36:47.618Z]       requests:
+[2023-07-26T09:36:47.618Z]         memory: "256Mi"
+[2023-07-26T09:36:47.618Z]         cpu: "100m"
+[2023-07-26T09:36:47.618Z]     volumeMounts:
+[2023-07-26T09:36:47.618Z]     - mountPath: "/home/jenkins/agent"
+[2023-07-26T09:36:47.618Z]       name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]       readOnly: false
+[2023-07-26T09:36:47.618Z]   nodeSelector:
+[2023-07-26T09:36:47.618Z]     kubernetes.io/os: "linux"
+[2023-07-26T09:36:47.618Z]   restartPolicy: "Never"
+[2023-07-26T09:36:47.618Z]   serviceAccountName: "jenkins"
+[2023-07-26T09:36:47.618Z]   volumes:
+[2023-07-26T09:36:47.618Z]   - configMap:
+[2023-07-26T09:36:47.618Z]       name: "cert-ca-globalsign"
+[2023-07-26T09:36:47.618Z]     name: "ca-pemstore"
+[2023-07-26T09:36:47.618Z]   - name: "docker-config"
+[2023-07-26T09:36:47.618Z]     secret:
+[2023-07-26T09:36:47.618Z]       items:
+[2023-07-26T09:36:47.618Z]       - key: ".dockerconfigjson"
+[2023-07-26T09:36:47.618Z]         path: "config.json"
+[2023-07-26T09:36:47.618Z]       secretName: "docker-texa"
+[2023-07-26T09:36:47.618Z]   - emptyDir:
+[2023-07-26T09:36:47.618Z]       medium: ""
+[2023-07-26T09:36:47.618Z]     name: "workspace-volume"
+[2023-07-26T09:36:47.618Z]   - emptyDir: {}
+[2023-07-26T09:36:47.618Z]     name: "docker-socket"
+[2023-07-26T09:36:47.618Z] 
+[2023-07-26T09:36:47.627Z] Running on rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4 in /home/jenkins/agent/workspace/RIM/rim-ui-webui-3
+[2023-07-26T09:36:47.635Z] [Pipeline] {
+[2023-07-26T09:36:47.715Z] [Pipeline] stage
+[2023-07-26T09:36:47.723Z] [Pipeline] { (Declarative: Checkout SCM)
+[2023-07-26T09:36:47.796Z] [Pipeline] checkout
+[2023-07-26T09:36:47.819Z] The recommended git tool is: NONE
+[2023-07-26T09:36:51.078Z] using credential rim-ci
+[2023-07-26T09:36:51.097Z] Cloning the remote Git repository
+[2023-07-26T09:36:51.123Z] Cloning repository https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git
+[2023-07-26T09:36:51.175Z]  > git init /home/jenkins/agent/workspace/RIM/rim-ui-webui-3 # timeout=10
+[2023-07-26T09:36:51.248Z] Fetching upstream changes from https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git
+[2023-07-26T09:36:51.248Z]  > git --version # timeout=10
+[2023-07-26T09:36:51.258Z]  > git --version # 'git version 2.30.2'
+[2023-07-26T09:36:51.259Z] using GIT_ASKPASS to set credentials сервисная УЗ bitbucket для проекта RIM
+[2023-07-26T09:36:51.275Z]  > git fetch --tags --force --progress -- https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2023-07-26T09:36:57.480Z] Avoid second fetch
+[2023-07-26T09:36:57.497Z] Checking out Revision 0b5c265611816335c32adfb2618f8571fed08b1b (refs/remotes/origin/master)
+[2023-07-26T09:36:56.973Z]  > git config remote.origin.url https://bb.ibs.ru/scm/gpnrim/rim-webui-3.git # timeout=10
+[2023-07-26T09:36:56.978Z]  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2023-07-26T09:36:57.484Z]  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+[2023-07-26T09:36:57.506Z]  > git config core.sparsecheckout # timeout=10
+[2023-07-26T09:36:57.524Z]  > git checkout -f 0b5c265611816335c32adfb2618f8571fed08b1b # timeout=10
+[2023-07-26T09:36:57.868Z] Commit message: "Pull request #213: RIM-4799: Удаление смет на этапе приемки"
+[2023-07-26T09:36:57.902Z] [Pipeline] }
+[2023-07-26T09:36:57.953Z] [Pipeline] // stage
+[2023-07-26T09:36:58.007Z] [Pipeline] withEnv
+[2023-07-26T09:36:58.016Z] [Pipeline] {
+[2023-07-26T09:36:58.078Z] [Pipeline] sh
+[2023-07-26T09:36:58.460Z] + tail+  -1
+[2023-07-26T09:36:58.461Z] git tag --points-at 0b5c265611816335c32adfb2618f8571fed08b1b
+[2023-07-26T09:36:58.461Z] + printf %s
+[2023-07-26T09:36:58.681Z] [Pipeline] sh
+[2023-07-26T09:36:58.971Z] + git rev-parse --short 0b5c265611816335c32adfb2618f8571fed08b1b
+[2023-07-26T09:36:58.973Z] + printf 0b5c2656
+[2023-07-26T09:36:59.013Z] [Pipeline] sh
+[2023-07-26T09:36:59.303Z] + git+  tag --points-at 0b5c265611816335c32adfb2618f8571fed08b1b
+[2023-07-26T09:36:59.305Z] tail -1
+[2023-07-26T09:36:59.305Z] + printf %s
+[2023-07-26T09:36:59.332Z] [Pipeline] sh
+[2023-07-26T09:36:59.620Z] + git rev-parse --short 0b5c265611816335c32adfb2618f8571fed08b1b
+[2023-07-26T09:36:59.623Z] + printf 0b5c2656
+[2023-07-26T09:36:59.665Z] [Pipeline] sh
+[2023-07-26T09:36:59.952Z] + git tag --points-at 0b5c265611816335c32adfb2618f8571fed08b1b
+[2023-07-26T09:36:59.954Z] + tail -1
+[2023-07-26T09:36:59.954Z] + printf %s
+[2023-07-26T09:36:59.985Z] [Pipeline] sh
+[2023-07-26T09:37:00.349Z] + git rev-parse --short 0b5c265611816335c32adfb2618f8571fed08b1b
+[2023-07-26T09:37:00.352Z] + printf 0b5c2656
+[2023-07-26T09:37:00.550Z] [Pipeline] withEnv
+[2023-07-26T09:37:00.560Z] [Pipeline] {
+[2023-07-26T09:37:00.742Z] [Pipeline] stage
+[2023-07-26T09:37:00.758Z] [Pipeline] { (Set build name)
+[2023-07-26T09:37:01.174Z] [Pipeline] container
+[2023-07-26T09:37:01.270Z] [Pipeline] {
+[2023-07-26T09:37:01.374Z] [Pipeline] echo
+[2023-07-26T09:37:01.445Z] dev
+[2023-07-26T09:37:01.544Z] [Pipeline] wrap
+[2023-07-26T09:37:01.746Z] [Pipeline] {
+[2023-07-26T09:37:01.941Z] [Pipeline] buildName
+[2023-07-26T09:37:01.974Z] New run name is '250-dev-origin/master-0b5c2656'
+[2023-07-26T09:37:02.159Z] [Pipeline] buildDescription
+[2023-07-26T09:37:02.264Z] New run description is 'Executed @ rim-rim-ui-webui-3-250-7kv7k-vgl8x-n2zc4. Build started by SPavlov'
+[2023-07-26T09:37:02.435Z] [Pipeline] }
+[2023-07-26T09:37:02.510Z] [Pipeline] // wrap
+[2023-07-26T09:37:02.546Z] [Pipeline] }
+[2023-07-26T09:37:02.609Z] [Pipeline] // container
+[2023-07-26T09:37:02.643Z] [Pipeline] }
+[2023-07-26T09:37:02.727Z] [Pipeline] // stage
+[2023-07-26T09:37:02.783Z] [Pipeline] stage
+[2023-07-26T09:37:02.793Z] [Pipeline] { (Check dependency)
+[2023-07-26T09:37:02.884Z] Stage "Check dependency" skipped due to when conditional
+[2023-07-26T09:37:02.920Z] [Pipeline] }
+[2023-07-26T09:37:02.980Z] [Pipeline] // stage
+[2023-07-26T09:37:03.023Z] [Pipeline] stage
+[2023-07-26T09:37:03.036Z] [Pipeline] { (Scan via SonarQube)
+[2023-07-26T09:37:03.089Z] Stage "Scan via SonarQube" skipped due to when conditional
+[2023-07-26T09:37:03.108Z] [Pipeline] }
+[2023-07-26T09:37:03.162Z] [Pipeline] // stage
+[2023-07-26T09:37:03.203Z] [Pipeline] stage
+[2023-07-26T09:37:03.212Z] [Pipeline] { (Docker login)
+[2023-07-26T09:37:03.278Z] [Pipeline] container
+[2023-07-26T09:37:03.287Z] [Pipeline] {
+[2023-07-26T09:37:03.335Z] [Pipeline] echo
+[2023-07-26T09:37:03.344Z] ----docker login registry----
+[2023-07-26T09:37:03.372Z] [Pipeline] withCredentials
+[2023-07-26T09:37:03.388Z] Masking supported pattern matches of $PASSWORD
+[2023-07-26T09:37:03.410Z] [Pipeline] {
+[2023-07-26T09:37:03.448Z] [Pipeline] withEnv
+[2023-07-26T09:37:03.455Z] [Pipeline] {
+[2023-07-26T09:37:03.502Z] [Pipeline] sh
+[2023-07-26T09:37:04.171Z] + docker login texa.ibs.ru -u gpn-rim-ci -p ****
+[2023-07-26T09:37:04.176Z] WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+[2023-07-26T09:37:04.176Z] WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+[2023-07-26T09:37:04.176Z] Configure a credential helper to remove this warning. See
+[2023-07-26T09:37:04.176Z] https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+[2023-07-26T09:37:04.176Z] 
+[2023-07-26T09:37:04.176Z] Login Succeeded
+[2023-07-26T09:37:04.214Z] [Pipeline] }
+[2023-07-26T09:37:04.276Z] [Pipeline] // withEnv
+[2023-07-26T09:37:04.303Z] [Pipeline] }
+[2023-07-26T09:37:04.367Z] [Pipeline] // withCredentials
+[2023-07-26T09:37:04.388Z] [Pipeline] }
+[2023-07-26T09:37:04.445Z] [Pipeline] // container
+[2023-07-26T09:37:04.468Z] [Pipeline] }
+[2023-07-26T09:37:04.524Z] [Pipeline] // stage
+[2023-07-26T09:37:04.559Z] [Pipeline] stage
+[2023-07-26T09:37:04.570Z] [Pipeline] { (Show build env)
+[2023-07-26T09:37:04.682Z] [Pipeline] echo
+[2023-07-26T09:37:04.689Z] dev
+[2023-07-26T09:37:04.705Z] [Pipeline] sh
+[2023-07-26T09:37:05.003Z] + rm -f ./src/rim-webui/.env.example ./src/rim-webui/.env.production
+[2023-07-26T09:37:05.038Z] [Pipeline] sh
+[2023-07-26T09:37:05.336Z] + ls -la ./src/rim-webui/
+[2023-07-26T09:37:05.337Z] total 2172
+[2023-07-26T09:37:05.337Z] drwxr-xr-x.  5 jenkins jenkins    4096 Jul 26 09:37 .
+[2023-07-26T09:37:05.337Z] drwxr-xr-x.  4 jenkins jenkins     134 Jul 26 09:36 ..
+[2023-07-26T09:37:05.337Z] -rw-r--r--.  1 jenkins jenkins      84 Jul 26 09:36 .eslintignore
+[2023-07-26T09:37:05.337Z] -rw-r--r--.  1 jenkins jenkins    7450 Jul 26 09:36 .eslintrc.js
+[2023-07-26T09:37:05.337Z] -rw-r--r--.  1 jenkins jenkins     330 Jul 26 09:36 .gitignore
+[2023-07-26T09:37:05.337Z] -rw-r--r--.  1 jenkins jenkins     118 Jul 26 09:36 .npmrc.example
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins      32 Jul 26 09:36 .prettierignore
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins     199 Jul 26 09:36 .prettierrc.js
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins      12 Jul 26 09:36 .stylelintignore
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins     149 Jul 26 09:36 .stylelintrc
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins    2578 Jul 26 09:36 README.md
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins     259 Jul 26 09:36 codegen.ts
+[2023-07-26T09:37:05.338Z] drwxr-xr-x.  2 jenkins jenkins      47 Jul 26 09:36 config
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins     645 Jul 26 09:36 craco.config.js
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins    1512 Jul 26 09:36 get-gql-spec.js
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins 1600456 Jul 26 09:36 package-lock.json
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins    3519 Jul 26 09:36 package.json
+[2023-07-26T09:37:05.338Z] drwxr-xr-x.  2 jenkins jenkins     120 Jul 26 09:36 public
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins  548989 Jul 26 09:36 schema.graphql
+[2023-07-26T09:37:05.338Z] drwxr-xr-x. 12 jenkins jenkins    4096 Jul 26 09:36 src
+[2023-07-26T09:37:05.338Z] -rw-r--r--.  1 jenkins jenkins     557 Jul 26 09:36 tsconfig.json
+[2023-07-26T09:37:05.364Z] [Pipeline] }
+[2023-07-26T09:37:05.415Z] [Pipeline] // stage
+[2023-07-26T09:37:05.463Z] [Pipeline] stage
+[2023-07-26T09:37:05.476Z] [Pipeline] { (Check exists image)
+[2023-07-26T09:37:05.559Z] [Pipeline] container
+[2023-07-26T09:37:05.570Z] [Pipeline] {
+[2023-07-26T09:37:05.635Z] [Pipeline] echo
+[2023-07-26T09:37:05.643Z] ----Check image in registry----
+[2023-07-26T09:37:05.674Z] [Pipeline] withEnv
+[2023-07-26T09:37:05.684Z] [Pipeline] {
+[2023-07-26T09:37:05.731Z] [Pipeline] script
+[2023-07-26T09:37:05.749Z] [Pipeline] {
+[2023-07-26T09:37:05.806Z] [Pipeline] sh
+[2023-07-26T09:37:06.368Z] + docker pull texa.ibs.ru/u220002054-rim/u220002054-rim-ui-webui-3:0b5c2656
+[2023-07-26T09:37:06.370Z] + echo false
+[2023-07-26T09:37:06.400Z] [Pipeline] }
+[2023-07-26T09:37:06.461Z] [Pipeline] // script
+[2023-07-26T09:37:06.486Z] [Pipeline] }
+[2023-07-26T09:37:06.545Z] [Pipeline] // withEnv
+[2023-07-26T09:37:06.574Z] [Pipeline] echo
+[2023-07-26T09:37:06.582Z] ENV IMAGE_EXISTS value: false
+[2023-07-26T09:37:06.590Z] [Pipeline] }
+[2023-07-26T09:37:06.657Z] [Pipeline] // container
+[2023-07-26T09:37:06.678Z] [Pipeline] }
+[2023-07-26T09:37:06.724Z] [Pipeline] // stage
+[2023-07-26T09:37:06.764Z] [Pipeline] stage
+[2023-07-26T09:37:06.771Z] [Pipeline] { (Build)
+[2023-07-26T09:37:06.841Z] [Pipeline] container
+[2023-07-26T09:37:06.848Z] [Pipeline] {
+[2023-07-26T09:37:06.890Z] [Pipeline] echo
+[2023-07-26T09:37:06.897Z] ----Build docker image----
+[2023-07-26T09:37:06.928Z] [Pipeline] withCredentials
+[2023-07-26T09:37:06.945Z] Masking supported pattern matches of $TOKEN
+[2023-07-26T09:37:06.969Z] [Pipeline] {
+[2023-07-26T09:37:07.008Z] [Pipeline] withEnv
+[2023-07-26T09:37:07.015Z] [Pipeline] {
+[2023-07-26T09:37:07.075Z] [Pipeline] sh
+[2023-07-26T09:37:07.634Z] + docker build -f docker/rim-webui/Dockerfile-trust -t texa.ibs.ru/u220002054-rim/u220002054-rim-ui-webui-3:0b5c2656 . --build-arg 'RH_REGISTRY=registry.access.redhat.com' --build-arg 'NPM_REGISTRY_ALL=https://texa.ibs.ru/repository/npm-group/' --build-arg 'NPM_ALWAYS_AUTH=true' --build-arg 'NPM_REGISTRY_ALL_AUTH=****'
+[2023-07-26T09:37:08.209Z] Sending build context to Docker daemon  8.772MB
+[2023-07-26T09:37:08.209Z] Step 1/24 : ARG RH_REGISTRY
+[2023-07-26T09:37:08.209Z] Step 2/24 : FROM ${RH_REGISTRY}/ubi8/nodejs-16 AS builder
+[2023-07-26T09:37:09.611Z] latest: Pulling from ubi8/nodejs-16
+[2023-07-26T09:37:09.611Z] 6c53be4efe39: Pulling fs layer
+[2023-07-26T09:37:09.611Z] d96c2f4a5465: Pulling fs layer
+[2023-07-26T09:37:09.611Z] 46e6dded7bc8: Pulling fs layer
+[2023-07-26T09:37:12.167Z] d96c2f4a5465: Verifying Checksum
+[2023-07-26T09:37:12.167Z] d96c2f4a5465: Download complete
+[2023-07-26T09:37:17.453Z] 6c53be4efe39: Download complete
+[2023-07-26T09:37:21.683Z] 6c53be4efe39: Pull complete
+[2023-07-26T09:37:22.267Z] 46e6dded7bc8: Verifying Checksum
+[2023-07-26T09:37:22.267Z] 46e6dded7bc8: Download complete
+[2023-07-26T09:37:28.882Z] d96c2f4a5465: Pull complete
+[2023-07-26T09:37:37.091Z] 46e6dded7bc8: Pull complete
+[2023-07-26T09:37:37.091Z] Digest: sha256:a86b8bd73059301c1342a5847a8d9b77cf38cdd4958b3d6406aa77e36d79cf04
+[2023-07-26T09:37:37.091Z] Status: Downloaded newer image for registry.access.redhat.com/ubi8/nodejs-16:latest
+[2023-07-26T09:37:37.091Z]  ---> 6864215d3e39
+[2023-07-26T09:37:37.091Z] Step 3/24 : ARG NPM_REGISTRY_ALL            # адрес репозитория публичных пакетов npm
+[2023-07-26T09:37:49.371Z]  ---> Running in 36d10f6ff975
+[2023-07-26T09:37:54.658Z] Removing intermediate container 36d10f6ff975
+[2023-07-26T09:37:54.658Z]  ---> 7d9b887f88da
+[2023-07-26T09:37:54.658Z] Step 4/24 : ARG NPM_ALWAYS_AUTH             # настройка always-auth для репозитория публичных пакетов npm
+[2023-07-26T09:38:01.253Z]  ---> Running in dcbf9c572425
+[2023-07-26T09:38:07.923Z] Removing intermediate container dcbf9c572425
+[2023-07-26T09:38:07.924Z]  ---> 8ad29ea01afb
+[2023-07-26T09:38:07.924Z] Step 5/24 : ARG NPM_REGISTRY_ALL_AUTH       # настройка авторизации для репозитория публичных пакетов npm
+[2023-07-26T09:38:14.587Z]  ---> Running in cbef4536d928
+[2023-07-26T09:38:21.197Z] Removing intermediate container cbef4536d928
+[2023-07-26T09:38:21.197Z]  ---> 6960581037c5
+[2023-07-26T09:38:21.197Z] Step 6/24 : ARG NEXUS_REGISTRY              # адрес репозитория nexus в КСПД
+[2023-07-26T09:38:27.808Z]  ---> Running in b2e1bbc90b0a
+[2023-07-26T09:38:34.396Z] Removing intermediate container b2e1bbc90b0a
+[2023-07-26T09:38:34.396Z]  ---> e2e4c8541430
+[2023-07-26T09:38:34.396Z] Step 7/24 : WORKDIR /app
+[2023-07-26T09:38:39.678Z]  ---> Running in ce4ca9407686
+[2023-07-26T09:38:45.028Z] Removing intermediate container ce4ca9407686
+[2023-07-26T09:38:45.028Z]  ---> 3d5e31519706
+[2023-07-26T09:38:45.028Z] Step 8/24 : USER root
+[2023-07-26T09:38:51.704Z]  ---> Running in 9394637ab667
+[2023-07-26T09:38:58.368Z] Removing intermediate container 9394637ab667
+[2023-07-26T09:38:58.368Z]  ---> 3fcaa6184b80
+[2023-07-26T09:38:58.368Z] Step 9/24 : RUN if [[ -n "$NEXUS_REGISTRY" ]] ; then curl -k https://$NEXUS_REGISTRY:443/repository/local-repo/CA/root-ca-gazprom-neft.pem --output /etc/pki/ca-trust/source/anchors/root-ca-gazprom-neft.crt &&             curl -k https://$NEXUS_REGISTRY:443/repository/local-repo/CA/sub-ca-gazprom-neft.pem --output /etc/pki/ca-trust/source/anchors/sub-ca-gazprom-neft.crt &&             update-ca-trust ;     else    curl -k https://texa.ibs.ru/repository/local-repo2/CA/root_pem_globalsign_ssl_dv_wildcard_1.crt --output /etc/pki/ca-trust/source/anchors/root-ca-globalsign.crt &&             curl -k https://texa.ibs.ru/repository/local-repo2/CA/intermediate_pem_globalsign_ssl_dv_wildcard_1.crt --output /etc/pki/ca-trust/source/anchors/intermediate-ca-globalsign.crt &&             update-ca-trust ;     fi
+[2023-07-26T09:39:03.829Z]  ---> Running in 218863c14d71
+[2023-07-26T09:39:03.829Z] [91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-07-26T09:39:03.829Z]                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-07-26T09:39:03.829Z]   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m100  1228  100  1228    0     0  15544      0 --:--:-- --:--:-- --:--:-- 15544
+[2023-07-26T09:39:03.829Z] [0m[91m  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+[2023-07-26T09:39:03.829Z]                                  Dload  Upload   Total   Spent    Left  Speed
+[2023-07-26T09:39:03.829Z]   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[0m[91m100  1687  100  1687    0     0  60250      0 --:--:-- --:--:-- --:--:-- 60250
+[2023-07-26T09:39:10.418Z] [0mRemoving intermediate container 218863c14d71
+[2023-07-26T09:39:10.418Z]  ---> 768e5a7a9fe8
+[2023-07-26T09:39:10.418Z] Step 10/24 : COPY src/rim-webui/ .
+[2023-07-26T09:39:20.493Z]  ---> ba927049aadc
+[2023-07-26T09:39:20.494Z] Step 11/24 : RUN if [[ -n "$NEXUS_REGISTRY" ]] ; then sed -i "s|http://texa.ibs.ru/repository/npm-group/|$NPM_REGISTRY_ALL|g" ./package-lock.json ;     fi
+[2023-07-26T09:39:27.108Z]  ---> Running in c1cff736d182
+[2023-07-26T09:39:35.281Z] Removing intermediate container c1cff736d182
+[2023-07-26T09:39:35.281Z]  ---> 66ffa811b66e
+[2023-07-26T09:39:35.281Z] Step 12/24 : RUN npm config set registry ${NPM_REGISTRY_ALL}
+[2023-07-26T09:39:41.863Z]  ---> Running in 13e2715faf9e
+[2023-07-26T09:39:48.439Z] Removing intermediate container 13e2715faf9e
+[2023-07-26T09:39:48.439Z]  ---> 30ac4bcc8d05
+[2023-07-26T09:39:48.439Z] Step 13/24 : RUN npm config set always-auth ${NPM_ALWAYS_AUTH}
+[2023-07-26T09:39:55.034Z]  ---> Running in c230a4d94bf7
+[2023-07-26T09:40:01.748Z] Removing intermediate container c230a4d94bf7
+[2023-07-26T09:40:01.748Z]  ---> 4c5abfd983fe
+[2023-07-26T09:40:01.748Z] Step 14/24 : RUN npm config set _auth ${NPM_REGISTRY_ALL_AUTH}
+[2023-07-26T09:40:08.373Z]  ---> Running in 5d0f485d64e2
+[2023-07-26T09:40:09.319Z] [91mnpm[0m[91m WARN config `_auth`, `_authToken`, `username` and `_password` must be scoped to a registry. see `npm help npmrc` for more information.
+[2023-07-26T09:40:15.915Z] [0mRemoving intermediate container 5d0f485d64e2
+[2023-07-26T09:40:15.915Z]  ---> 8ce50f1622f3
+[2023-07-26T09:40:15.915Z] Step 15/24 : RUN npm ci --no-audit && npm run build -g --unsafe-perm=true --allow-root —verbose
+[2023-07-26T09:40:22.505Z]  ---> Running in a45926fce4b4
+[2023-07-26T09:40:54.641Z] [91mnpm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+[2023-07-26T09:40:54.641Z] [0m[91mnpm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+[2023-07-26T09:41:50.975Z] [0m
+[2023-07-26T09:41:50.975Z] added 1896 packages in 1m
+[2023-07-26T09:41:50.975Z] 
+[2023-07-26T09:41:50.975Z] 246 packages are looking for funding
+[2023-07-26T09:41:50.975Z]   run `npm fund` for details
+[2023-07-26T09:41:50.975Z] [91mnpm notice 
+[2023-07-26T09:41:50.975Z] npm notice[0m[91m New major version of npm available! 8.19.3 -> 9.8.1
+[2023-07-26T09:41:50.975Z] npm[0m[91m [0m[91mnotice Changelog: <https://github.com/npm/cli/releases/tag/v9.8.1>
+[2023-07-26T09:41:50.975Z] npm notice[0m[91m Run `npm install -g npm@9.8.1` to update!
+[2023-07-26T09:41:50.975Z] npm notice[0m[91m 
+[2023-07-26T09:41:50.975Z] [0m[91mnpm[0m[91m ERR! arg[0m[91m Argument starts with non-ascii dash, this is probably invalid: —verbose
+[2023-07-26T09:41:50.975Z] [0m
+[2023-07-26T09:41:50.975Z] > rim-webui@0.1.0 build
+[2023-07-26T09:41:50.975Z] > craco build —verbose
+[2023-07-26T09:41:50.975Z] 
+[2023-07-26T09:41:50.975Z] Creating an optimized production build...
+[2023-07-26T09:41:51.237Z] [91mBrowserslist: caniuse-lite is outdated. Please run:
+[2023-07-26T09:41:51.237Z]   npx update-browserslist-db@latest
+[2023-07-26T09:41:51.237Z]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2023-07-26T09:49:28.213Z] [0m[91mBrowserslist: caniuse-lite is outdated. Please run:
+[2023-07-26T09:49:28.213Z]   npx update-browserslist-db@latest
+[2023-07-26T09:49:28.213Z]   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2023-07-26T09:49:38.215Z] [0mFailed to compile.
+[2023-07-26T09:49:38.215Z] 
+[2023-07-26T09:49:38.215Z] [eslint] 
+[2023-07-26T09:49:38.215Z] src/pages/Project/BimProject/WorkOrder/BimWorkOrderPriceTable/hooks/useBimWorkOrderDeletePrices.tsx
+[2023-07-26T09:49:38.215Z]   Line 6:1:  There should be at least one empty line between import groups  import/order
+[2023-07-26T09:49:38.215Z]   Line 6:1:  `gql/graphql` import should occur before import of `react`     import/order
+[2023-07-26T09:49:38.215Z] 
+[2023-07-26T09:49:38.215Z] Search for the keywords to learn more about each error.
+[2023-07-26T09:49:38.215Z] 
+[2023-07-26T09:49:38.215Z] 
+[2023-07-26T09:49:38.215Z] The command '/bin/sh -c npm ci --no-audit && npm run build -g --unsafe-perm=true --allow-root —verbose' returned a non-zero code: 1
+[2023-07-26T09:49:38.251Z] [Pipeline] }
+[2023-07-26T09:49:38.345Z] [Pipeline] // withEnv
+[2023-07-26T09:49:38.374Z] [Pipeline] }
+[2023-07-26T09:49:38.433Z] [Pipeline] // withCredentials
+[2023-07-26T09:49:38.462Z] [Pipeline] }
+[2023-07-26T09:49:38.533Z] [Pipeline] // container
+[2023-07-26T09:49:38.576Z] [Pipeline] }
+[2023-07-26T09:49:38.630Z] [Pipeline] // stage
+[2023-07-26T09:49:38.671Z] [Pipeline] stage
+[2023-07-26T09:49:38.694Z] [Pipeline] { (Check vulnerabilities)
+[2023-07-26T09:49:38.729Z] Stage "Check vulnerabilities" skipped due to earlier failure(s)
+[2023-07-26T09:49:38.742Z] [Pipeline] }
+[2023-07-26T09:49:38.797Z] [Pipeline] // stage
+[2023-07-26T09:49:38.862Z] [Pipeline] stage
+[2023-07-26T09:49:38.869Z] [Pipeline] { (Build and push helm)
+[2023-07-26T09:49:38.896Z] Stage "Build and push helm" skipped due to earlier failure(s)
+[2023-07-26T09:49:38.913Z] [Pipeline] }
+[2023-07-26T09:49:38.968Z] [Pipeline] // stage
+[2023-07-26T09:49:39.018Z] [Pipeline] stage
+[2023-07-26T09:49:39.027Z] [Pipeline] { (Deploy to OKD4)
+[2023-07-26T09:49:39.059Z] Stage "Deploy to OKD4" skipped due to earlier failure(s)
+[2023-07-26T09:49:39.073Z] [Pipeline] }
+[2023-07-26T09:49:39.136Z] [Pipeline] // stage
+[2023-07-26T09:49:39.165Z] [Pipeline] }
+[2023-07-26T09:49:39.218Z] [Pipeline] // withEnv
+[2023-07-26T09:49:39.247Z] [Pipeline] }
+[2023-07-26T09:49:39.312Z] [Pipeline] // withEnv
+[2023-07-26T09:49:39.355Z] [Pipeline] }
+[2023-07-26T09:49:39.435Z] [Pipeline] // node
+[2023-07-26T09:49:39.467Z] [Pipeline] }
+[2023-07-26T09:49:39.529Z] [Pipeline] // podTemplate
+[2023-07-26T09:49:39.574Z] [Pipeline] End of Pipeline
+[2023-07-26T09:49:39.603Z] ERROR: script returned exit code 1
+[2023-07-26T09:49:39.626Z] Finished: FAILURE

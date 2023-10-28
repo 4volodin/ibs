@@ -1,0 +1,1 @@
+Напишите Dockerfile для SpringBoot приложения соблюдая Best Practicies

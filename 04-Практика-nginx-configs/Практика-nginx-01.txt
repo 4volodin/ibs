@@ -1,0 +1,2 @@
+Напишите nginx config с использованием let's encrypt сертификата и получения А+ рейтинга на https://www.ssllabs.com/ssltest/
+Доп. задание: запакуйте это в Docker container
