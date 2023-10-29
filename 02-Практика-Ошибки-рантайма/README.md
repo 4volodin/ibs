@@ -55,3 +55,12 @@ It seems to be a socket read timeout exception, it will retry later. if it conti
     - проверить состояние сети
     - поставить на мониторинг узлы
     - масштабировать если нагрузка не достаточна
+
+### 04. Ошибки в Spring psql
+#### Troubleshooting:
+
+`ERROR: column events0_.id does not exist Position: 8`:  столбец "events0_.id" не существует, как-то связано с запросом к таблице или сущности с именем "events0".
+
+
+#### Solution:
+Для устранения этой проблемы нужно изучить код и схему базы данных, чтобы убедиться, что столбец "id" в таблице "events0" существует и правильно ссылается в запросе
