@@ -87,3 +87,23 @@ http-outgoing-11 << "HTTP/1.1 404 Not Found[\r][\n]"
 #### Solution:
 
  Вы должны проверить, что вы отправляете правильные данные и URL-адрес, и что сервер настроен правильно для обработки этого запроса.
+
+### 05. Ошибки в Docker
+
+```
+yum install maven  
+fatal glibc error: CPU does not support x86-64-v2 
+```
+
+#### Troubleshooting:
+
+Ошибка "fatal glibc error: CPU does not support x86-64-v2" возникает, когда вы пытаетесь установить или выполнить программу, которая требует аппаратную поддержку инструкций x86-64-v2, но ваш процессор не поддерживает эти инструкции.
+
+#### [Solution](https://fixthebug.online/fatal-glibc-error-cpu-does-not-support-x86-64-v2/):
+
+- Проверить поддерживает ли CPU инструкции [SSE4.2 or AVX](https://developers.redhat.com/blog/2021/01/05/building-red-hat-enterprise-linux-9-for-the-x86-64-v2-microarchitecture-level#background_of_the_x86_64_microarchitecture_levels)
+- если нет,то upgrade hardware
+- ecли поддерживает,то 
+  - обновить систему и библиотеку glibc(rhel9 и образ ubi9 требует  CPU с поддержкой SSE4.2)
+  - обновить для гипервизора CPY type (например для proxmox установить в max, потому что по умолчанию стоит cpu type kvm64)
+  - обновить базовый образ
